@@ -17,5 +17,10 @@ namespace Team01_Project01.Models
         [Display(Name = "Room ")]
         public string roomNumber { get; set; }
 
+        [Range(600022, 600500)]
+        public string zipcode { get; set; }
+
+
+
     }
 }
