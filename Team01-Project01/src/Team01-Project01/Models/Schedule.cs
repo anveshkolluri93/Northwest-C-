@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
 namespace Team01_Project01.Models
@@ -13,8 +14,15 @@ namespace Team01_Project01.Models
             [Display(Name = "Faculty Available")]
             public string  FacultyId{ get; set; }
 
-            [Display(Name = "Students Enrolled")]
+        [Display(Name = "Time")]
+        public int time { get; set; }
+
+        [Display(Name = "Students Enrolled")]
             public string studentId { get; set; }
+      
+    
+
+
 
     }
 }
