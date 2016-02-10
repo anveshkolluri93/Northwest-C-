@@ -15,8 +15,8 @@ namespace Team01_Project01.Models
             public string  FacultyId{ get; set; }
 
         [Display(Name = "Time")]
-        public int time { get; set; }
-
+        public int time { get; set;}
+        //comment
         [Display(Name = "Students Enrolled")]
             public string studentId { get; set; }
       
