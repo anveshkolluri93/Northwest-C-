@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace Team01_Project01.Models
 
         [Display(Name = "Room ")]
         public string roomNumber { get; set; }
+
 
     }
 }

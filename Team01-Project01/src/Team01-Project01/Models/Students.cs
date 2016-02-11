@@ -8,14 +8,13 @@ namespace Team01_Project01.Models
 {
     public class Students
     {
-
             [ScaffoldColumn(false)]
             public int StudentId { get; set; }
             [Required]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
-            [Display(Name = "First Name")]
+            [Display(Name = "First Name")]                           
             public string FirstMidName { get; set; }
 
         [Display(Name = "Schedule")]
@@ -27,12 +26,5 @@ namespace Team01_Project01.Models
         [Range(0, 5)]
         [Display(Name = "Section Number")]
         public string SectionId { get; set; }
-
-        
-
-
-
     }
-    
-
 }
