@@ -8,13 +8,16 @@ namespace Team01_Project01.Models
 {
     public class Schedule
     {
-[ScaffoldColumn(false)]
+            [ScaffoldColumn(false)]
             public int ScheduleId { get; set; }
             [Required]
             [Display(Name = "Faculty Available")]
             public string  FacultyId{ get; set; }
 
-            [Display(Name = "Students Enrolled")]
+        [Display(Name = "Time")]
+        public int time { get; set; }
+
+        [Display(Name = "Students Enrolled")]
             public string studentId { get; set; }
 
     }
