@@ -9,7 +9,8 @@ namespace Team01_Project01.Models
     public class Schedule
     {
             [ScaffoldColumn(false)]
-            public int ScheduleId { get; set; }
+        [Key]
+        public int ScheduleId { get; set; }
             [Required]
             [Display(Name = "Faculty Available")]
             public string  FacultyId{ get; set; }

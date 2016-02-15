@@ -9,10 +9,12 @@ namespace Team01_Project01.Models
     public class Courses
     {
         [ScaffoldColumn(false)]
-        public int CourseId { get; set; }
         [Required]
+        [Key]
+        public int CourseId { get; set; }
+        
        
-        [Display(Name = "Course Name")]
+        [Display(Name = "Course Name")]                  
         public string courseName { get; set; }
 
         [Display(Name = "creditHours")]

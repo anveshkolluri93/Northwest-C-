@@ -12,6 +12,7 @@ namespace Team01_Project01.Models
     {
 
         [ScaffoldColumn(false)]
+        [Key]
         public int SectionId { get; set; }
 
         [Range(0,50)]

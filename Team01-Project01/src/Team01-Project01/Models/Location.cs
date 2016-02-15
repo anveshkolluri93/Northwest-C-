@@ -9,6 +9,7 @@ namespace Team01_Project01.Models
     public class Location
     {
         [ScaffoldColumn(false)]
+        [Key]
         public int LocationId { get; set; }
         [Required]
         [Display(Name = "building ")]

@@ -9,8 +9,10 @@ namespace Team01_Project01.Models
     public class Faculty
     {
         [ScaffoldColumn(false)]
+        [Key]
         public int FacultyId { get; set; }
         [Required]
+
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
