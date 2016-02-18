@@ -13,17 +13,21 @@ namespace Team01_Project01.Models
 
         [ScaffoldColumn(false)]
         [Key]
-        public int SectionId { get; set; }
+        public int sectionId { get; set; }
 
-        [Range(0,50)]
+        [Range(0,41)]
         [Display(Name ="Capacity")]
         public int capacity { get; set;  }
 
-        [Display(Name = "Faculty Name")]
-        public string FacultyId { get; set; }
 
         [Required]
-        [Display(Name = "Room")]
-        public string roomNumber { get; set; }
+        [Display(Name = "location key")]
+        public string locationId { get; set; }
+
+        [Display(Name = "course key")]
+        public string courseId { get; set; }
+
+        [Display(Name = "Faculty key")]
+        public string facultyId { get; set; }
     }
 }

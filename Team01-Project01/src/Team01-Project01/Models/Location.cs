@@ -10,18 +10,13 @@ namespace Team01_Project01.Models
     {
         [ScaffoldColumn(false)]
         [Key]
-        public int LocationId { get; set; }
+        public int locationId { get; set; }
         [Required]
         [Display(Name = "building ")]
         public string buildingId { get; set; }
 
-        [Display(Name = "Room ")]
+        [Display(Name = "Room Number")]
         public string roomNumber { get; set; }
-
-        [Range(600022, 600500)]
-        public string zipcode { get; set; }
-
-
 
     }
 }

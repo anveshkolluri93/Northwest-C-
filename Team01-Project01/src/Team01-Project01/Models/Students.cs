@@ -9,8 +9,9 @@ namespace Team01_Project01.Models
     public class Students
     {
             [ScaffoldColumn(false)]
-        [Key]
-        public int StudentId { get; set; }
+            [Key]
+            public int studentId { get; set; }
+
             [Required]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
@@ -18,14 +19,11 @@ namespace Team01_Project01.Models
             [Display(Name = "First Name")]                           
             public string FirstMidName { get; set; }
 
-        [Display(Name = "Schedule")]
-        public string ScheduleId { get; set; }
+        [Display(Name = "Schedule key")]
+        public string CRN { get; set; }
 
         [Display(Name = "Course Name")]
         public string CourseId { get; set; }
 
-        [Range(0, 5)]
-        [Display(Name = "Section Number")]
-        public string SectionId { get; set; }
     }
 }

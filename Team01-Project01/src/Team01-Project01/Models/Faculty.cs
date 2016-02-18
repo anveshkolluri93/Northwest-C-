@@ -10,7 +10,7 @@ namespace Team01_Project01.Models
     {
         [ScaffoldColumn(false)]
         [Key]
-        public int FacultyId { get; set; }
+        public int facultyId { get; set; }
         [Required]
 
         [Display(Name = "Last Name")]
@@ -19,8 +19,6 @@ namespace Team01_Project01.Models
         [Display(Name = "First Name")]
         public string FirstMidName { get; set; }
 
-        [Display(Name = "section allocated")]
-        public string sectionId { get; set; }
 
     }
 }
