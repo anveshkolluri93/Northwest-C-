@@ -10,7 +10,7 @@ using Team01_Project01.Models;
 
 namespace Team01_Project01.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

@@ -7,7 +7,8 @@ using Microsoft.Data.Entity;
 
 namespace Team01_Project01.Models
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    //deleted this super class IdentityDbContext<ApplicationUser>, 
+    public class AppDbContext :DbContext
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {

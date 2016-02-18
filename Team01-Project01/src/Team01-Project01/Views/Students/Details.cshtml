@@ -11,6 +11,12 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.CRN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CRN)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.CourseId)
         </dt>
         <dd>
@@ -28,21 +34,9 @@
         <dd>
             @Html.DisplayFor(model => model.LastName)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ScheduleId)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ScheduleId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.SectionId)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.SectionId)
-        </dd>
     </dl>
 </div>
 <p>
-    <a asp-action="Edit" asp-route-id="@Model.StudentId">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.studentId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </p>

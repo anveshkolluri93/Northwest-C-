@@ -4,27 +4,24 @@ using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using Team01_Project01.Models;
 
-
-namespace Team01Project01.Controllers
+namespace Team01-Project01.Controllers
 {
-    public class SchedulesController : Controller
+    public class StudentsController : Controller
     {
-
         private AppDbContext _context;
 
-        public SchedulesController(AppDbContext context)
+        public StudentsController(AppDbContext context)
         {
-
             _context = context;    
         }
 
-        // GET: Schedules
+        // GET: Students
         public IActionResult Index()
         {
-            return View(_context.Schedule.ToList());
+            return View(_context.Students.ToList());
         }
 
-        // GET: Schedules/Details/5
+        // GET: Students/Details/5
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -32,36 +29,36 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Schedule schedule = _context.Schedule.Single(m => m.CRN == id);
-            if (schedule == null)
+            Students students = _context.Students.Single(m => m.studentId == id);
+            if (students == null)
             {
                 return HttpNotFound();
             }
 
-            return View(schedule);
+            return View(students);
         }
 
-        // GET: Schedules/Create
+        // GET: Students/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Schedules/Create
+        // POST: Students/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Schedule schedule)
+        public IActionResult Create(Students students)
         {
             if (ModelState.IsValid)
             {
-                _context.Schedule.Add(schedule);
+                _context.Students.Add(students);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(schedule);
+            return View(students);
         }
 
-        // GET: Schedules/Edit/5
+        // GET: Students/Edit/5
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -69,29 +66,29 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Schedule schedule = _context.Schedule.Single(m => m.CRN == id);
-            if (schedule == null)
+            Students students = _context.Students.Single(m => m.studentId == id);
+            if (students == null)
             {
                 return HttpNotFound();
             }
-            return View(schedule);
+            return View(students);
         }
 
-        // POST: Schedules/Edit/5
+        // POST: Students/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Schedule schedule)
+        public IActionResult Edit(Students students)
         {
             if (ModelState.IsValid)
             {
-                _context.Update(schedule);
+                _context.Update(students);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(schedule);
+            return View(students);
         }
 
-        // GET: Schedules/Delete/5
+        // GET: Students/Delete/5
         [ActionName("Delete")]
         public IActionResult Delete(int? id)
         {
@@ -100,22 +97,22 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Schedule schedule = _context.Schedule.Single(m => m.CRN == id);
-            if (schedule == null)
+            Students students = _context.Students.Single(m => m.studentId == id);
+            if (students == null)
             {
                 return HttpNotFound();
             }
 
-            return View(schedule);
+            return View(students);
         }
 
-        // POST: Schedules/Delete/5
+        // POST: Students/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Schedule schedule = _context.Schedule.Single(m => m.CRN == id);
-            _context.Schedule.Remove(schedule);
+            Students students = _context.Students.Single(m => m.studentId == id);
+            _context.Students.Remove(students);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
