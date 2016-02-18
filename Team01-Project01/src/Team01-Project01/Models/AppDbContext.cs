@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
+using Team01_Project01.Models;
 
 namespace Team01_Project01.Models
 {
@@ -23,5 +24,6 @@ namespace Team01_Project01.Models
         public DbSet<Location> Location { get; set; }
         public DbSet<Schedule> Schedule { get; set; }
         public DbSet<Courses> Courses { get; set; }
+        public DbSet<Section> Section { get; set; }
     }
 }

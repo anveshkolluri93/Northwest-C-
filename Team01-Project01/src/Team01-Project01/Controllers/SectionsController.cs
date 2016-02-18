@@ -6,22 +6,22 @@ using Team01_Project01.Models;
 
 namespace Team01Project01.Controllers
 {
-    public class StudentsController : Controller
+    public class SectionsController : Controller
     {
         private AppDbContext _context;
 
-        public StudentsController(AppDbContext context)
+        public SectionsController(AppDbContext context)
         {
             _context = context;    
         }
 
-        // GET: Students
+        // GET: Sections
         public IActionResult Index()
         {
-            return View(_context.Students.ToList());
+            return View(_context.Section.ToList());
         }
 
-        // GET: Students/Details/5
+        // GET: Sections/Details/5
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -29,36 +29,36 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
-            if (students == null)
+            Section section = _context.Section.Single(m => m.sectionId == id);
+            if (section == null)
             {
                 return HttpNotFound();
             }
 
-            return View(students);
+            return View(section);
         }
 
-        // GET: Students/Create
+        // GET: Sections/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
+        // POST: Sections/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Students students)
+        public IActionResult Create(Section section)
         {
             if (ModelState.IsValid)
             {
-                _context.Students.Add(students);
+                _context.Section.Add(section);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(students);
+            return View(section);
         }
 
-        // GET: Students/Edit/5
+        // GET: Sections/Edit/5
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -66,29 +66,29 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
-            if (students == null)
+            Section section = _context.Section.Single(m => m.sectionId == id);
+            if (section == null)
             {
                 return HttpNotFound();
             }
-            return View(students);
+            return View(section);
         }
 
-        // POST: Students/Edit/5
+        // POST: Sections/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Students students)
+        public IActionResult Edit(Section section)
         {
             if (ModelState.IsValid)
             {
-                _context.Update(students);
+                _context.Update(section);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(students);
+            return View(section);
         }
 
-        // GET: Students/Delete/5
+        // GET: Sections/Delete/5
         [ActionName("Delete")]
         public IActionResult Delete(int? id)
         {
@@ -97,22 +97,22 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
-            if (students == null)
+            Section section = _context.Section.Single(m => m.sectionId == id);
+            if (section == null)
             {
                 return HttpNotFound();
             }
 
-            return View(students);
+            return View(section);
         }
 
-        // POST: Students/Delete/5
+        // POST: Sections/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Students students = _context.Students.Single(m => m.studentId == id);
-            _context.Students.Remove(students);
+            Section section = _context.Section.Single(m => m.sectionId == id);
+            _context.Section.Remove(section);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

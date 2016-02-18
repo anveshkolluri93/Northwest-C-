@@ -6,22 +6,22 @@ using Team01_Project01.Models;
 
 namespace Team01Project01.Controllers
 {
-    public class StudentsController : Controller
+    public class LocationsController : Controller
     {
         private AppDbContext _context;
 
-        public StudentsController(AppDbContext context)
+        public LocationsController(AppDbContext context)
         {
             _context = context;    
         }
 
-        // GET: Students
+        // GET: Locations
         public IActionResult Index()
         {
-            return View(_context.Students.ToList());
+            return View(_context.Location.ToList());
         }
 
-        // GET: Students/Details/5
+        // GET: Locations/Details/5
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -29,36 +29,36 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
-            if (students == null)
+            Location location = _context.Location.Single(m => m.locationId == id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
 
-            return View(students);
+            return View(location);
         }
 
-        // GET: Students/Create
+        // GET: Locations/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
+        // POST: Locations/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Students students)
+        public IActionResult Create(Location location)
         {
             if (ModelState.IsValid)
             {
-                _context.Students.Add(students);
+                _context.Location.Add(location);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(students);
+            return View(location);
         }
 
-        // GET: Students/Edit/5
+        // GET: Locations/Edit/5
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -66,29 +66,29 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
-            if (students == null)
+            Location location = _context.Location.Single(m => m.locationId == id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
-            return View(students);
+            return View(location);
         }
 
-        // POST: Students/Edit/5
+        // POST: Locations/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Students students)
+        public IActionResult Edit(Location location)
         {
             if (ModelState.IsValid)
             {
-                _context.Update(students);
+                _context.Update(location);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(students);
+            return View(location);
         }
 
-        // GET: Students/Delete/5
+        // GET: Locations/Delete/5
         [ActionName("Delete")]
         public IActionResult Delete(int? id)
         {
@@ -97,22 +97,22 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
-            if (students == null)
+            Location location = _context.Location.Single(m => m.locationId == id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
 
-            return View(students);
+            return View(location);
         }
 
-        // POST: Students/Delete/5
+        // POST: Locations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Students students = _context.Students.Single(m => m.studentId == id);
-            _context.Students.Remove(students);
+            Location location = _context.Location.Single(m => m.locationId == id);
+            _context.Location.Remove(location);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
