@@ -13,6 +13,7 @@ namespace Team01Project01.Controllers
 
         public SchedulesController(ApplicationDbContext context)
         {
+
             _context = context;    
         }
 
