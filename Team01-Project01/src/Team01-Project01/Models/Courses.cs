@@ -17,10 +17,10 @@ namespace Team01_Project01.Models
         [Display(Name = "Course Name")]                  
         public string courseName { get; set; }
 
-        [Display(Name = "courseDuration")]
+        [Display(Name = "course Duration")]
         public string duration{ get; set; }
 
-        [Display(Name = "creditHours")]
+        [Display(Name = "credit Hours")]
         public string credits { get; set; }
 
 
