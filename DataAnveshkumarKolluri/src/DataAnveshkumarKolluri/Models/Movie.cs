@@ -8,15 +8,16 @@ namespace DataAnveshkumarKolluri.Models
 {
     public class Movie
     {
-
+        
         [ScaffoldColumn(false)]
+        
         public int MovieID { get; set; }
         
         [Display(Name = "Movie's Title")]
         public string MovieTitle { get; set; }
         [Display(Name = "Movie Reviews")]
         public string MovieReviews { get; set; }
-
+                                                    
         [Display(Name = "Genre")]
         public string MovieGenre { get; set; }
 

@@ -8,7 +8,7 @@ using DataAnveshkumarKolluri.Models;
 namespace DataAnveshkumarKolluri.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20160217034659_InitialMigration")]
+    [Migration("20160219014222_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
