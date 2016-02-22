@@ -12,7 +12,7 @@ namespace Team01_Project01.Models
         [Key]
         public int locationId { get; set; }
         [Required]
-        [Display(Name = "building ")]
+        [Display(Name = "building Id")]
         public string buildingId { get; set; }
 
         [Display(Name = "Room Number")]

@@ -7,9 +7,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DataAnveshkumarKolluri.Models
 {
-    public class Location: Exception
+    public class Location
     {
         [ScaffoldColumn(false)]
+        [Key]
         public int LocationID { get; set; }
         [Display(Name = "Country")]
         public string Country { get; set; }
@@ -27,11 +28,6 @@ namespace DataAnveshkumarKolluri.Models
         public double Latitude { get; set; }
         [Display(Name = "Longitude")]
         public double Longitude { get; set; }
-
-        public static implicit operator Location(EntityEntry<Location> v)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }

@@ -21,10 +21,10 @@ namespace Team01_Project01.Models
 
 
         [Required]
-        [Display(Name = "location key")]
+        [Display(Name = "Location key")]
         public string locationId { get; set; }
 
-        [Display(Name = "course key")]
+        [Display(Name = "Course key")]
         public string courseId { get; set; }
 
         [Display(Name = "Faculty key")]
