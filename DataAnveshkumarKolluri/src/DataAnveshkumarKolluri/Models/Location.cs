@@ -28,6 +28,8 @@ namespace DataAnveshkumarKolluri.Models
         public double Latitude { get; set; }
         [Display(Name = "Longitude")]
         public double Longitude { get; set; }
+
+        public ICollection<Movie> Movie { get; set; }
     }
 
 }
