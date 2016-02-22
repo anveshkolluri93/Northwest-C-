@@ -27,9 +27,11 @@ namespace DataAnveshkumarKolluri.Models
         [Display(Name = "ActressName")]
         public string ActressName { get; set; }
 
+       
         [ScaffoldColumn(false)]
         public int LocationID { get; set; }
 
+       
         public virtual Location Location { get; set; }
 
 

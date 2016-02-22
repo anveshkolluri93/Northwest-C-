@@ -9,9 +9,7 @@ namespace Team01_Project01.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-
             
-
         }
     }
     }
