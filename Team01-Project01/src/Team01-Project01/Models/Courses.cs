@@ -4,11 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Team01_Project01.Models
 {
     public class Courses
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [ScaffoldColumn(false)]
         [Required]
         [Key]

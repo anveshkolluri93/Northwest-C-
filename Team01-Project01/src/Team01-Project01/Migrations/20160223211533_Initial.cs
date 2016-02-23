@@ -5,7 +5,7 @@ using Microsoft.Data.Entity.Metadata;
 
 namespace Team01Project01.Migrations
 {
-    public partial class initit : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,7 @@ namespace Team01Project01.Migrations
                 name: "Courses",
                 columns: table => new
                 {
-                    courseId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    courseId = table.Column<int>(nullable: false),
                     courseName = table.Column<string>(nullable: true),
                     credits = table.Column<double>(nullable: false),
                     duration = table.Column<string>(nullable: true)

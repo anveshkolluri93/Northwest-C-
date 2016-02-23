@@ -8,8 +8,8 @@ using Team01_Project01.Models;
 namespace Team01Project01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20160223192214_initit")]
-    partial class initit
+    [Migration("20160223211533_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,8 +19,7 @@ namespace Team01Project01.Migrations
 
             modelBuilder.Entity("Team01_Project01.Models.Courses", b =>
                 {
-                    b.Property<int>("courseId")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("courseId");
 
                     b.Property<string>("courseName");
 
