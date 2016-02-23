@@ -5,10 +5,10 @@ using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
 using Team01_Project01.Models;
 
-namespace Team01_Project01.Migrations
+namespace Team01Project01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace Team01_Project01.Migrations
 
                     b.Property<string>("courseName");
 
-                    b.Property<string>("credits");
+                    b.Property<double>("credits");
 
                     b.Property<string>("duration");
 

@@ -4,13 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Identity.EntityFramework;
+
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
 using Team01_Project01.Models;
 using Team01_Project01.Services;
+using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Team01_Project01
 {
@@ -72,7 +75,7 @@ namespace Team01_Project01
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IApplicationEnvironment appEnv)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -118,7 +121,7 @@ namespace Team01_Project01
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            AppSeedData.Initialize(app.ApplicationServices);
+            AppSeedData.Initialize(app.ApplicationServices, appEnv.ApplicationBasePath);
 
         }
 
