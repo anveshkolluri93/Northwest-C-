@@ -8,8 +8,8 @@ using Team01_Project01.Models;
 namespace Team01Project01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20160223230437_initialmig")]
-    partial class initialmig
+    [Migration("20160224032432_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,8 +60,7 @@ namespace Team01Project01.Migrations
 
             modelBuilder.Entity("Team01_Project01.Models.Schedule", b =>
                 {
-                    b.Property<int>("CRN")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("ScheduleNumber");
 
                     b.Property<int>("courseId");
 
@@ -70,15 +69,15 @@ namespace Team01Project01.Migrations
                     b.Property<string>("facultyId")
                         .IsRequired();
 
-                    b.Property<string>("locationId");
+                    b.Property<int>("locationId");
 
                     b.Property<int>("sectionId");
 
                     b.Property<string>("studentId");
 
-                    b.Property<int>("time");
+                    b.Property<string>("time");
 
-                    b.HasKey("CRN");
+                    b.HasKey("ScheduleNumber");
                 });
 
             modelBuilder.Entity("Team01_Project01.Models.Section", b =>

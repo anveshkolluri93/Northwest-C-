@@ -5,7 +5,7 @@ using Microsoft.Data.Entity.Metadata;
 
 namespace Team01Project01.Migrations
 {
-    public partial class initialmig : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -53,19 +53,18 @@ namespace Team01Project01.Migrations
                 name: "Schedule",
                 columns: table => new
                 {
-                    CRN = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ScheduleNumber = table.Column<int>(nullable: false),
                     courseId = table.Column<int>(nullable: false),
                     date = table.Column<DateTime>(nullable: false),
                     facultyId = table.Column<string>(nullable: false),
-                    locationId = table.Column<string>(nullable: true),
+                    locationId = table.Column<int>(nullable: false),
                     sectionId = table.Column<int>(nullable: false),
                     studentId = table.Column<string>(nullable: true),
-                    time = table.Column<int>(nullable: false)
+                    time = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Schedule", x => x.CRN);
+                    table.PrimaryKey("PK_Schedule", x => x.ScheduleNumber);
                 });
             migrationBuilder.CreateTable(
                 name: "Section",
