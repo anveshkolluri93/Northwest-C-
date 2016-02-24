@@ -34,10 +34,18 @@ body {
 }
 
 .section-colored {
-  background-color: #e1e1e1;
+  background-color: lightblue;
  /* change this to change the background color of a colored section */
 }
-
+.imgg{
+   
+}
+.log{
+    background-size:cover;
+}
+.abc{
+    background-size:cover;
+}
 .sidebar {
   margin-top: 40px;
 }
@@ -52,6 +60,37 @@ body {
 .carousel {
   height: 50%;
 }
+     .panel-title
+        {
+            align-content: center;
+        }
+        .navbar-default{
+            background-color: cadetblue;
+        }
+        .panel-heading{
+            background-color: cadetblue !important;
+        }
+        .btn-success{
+            background-color: cadetblue;
+        }
+.text-right{
+    text-align:right !important;
+}
+ 
+ .vertical-offset-100{
+            padding-top:100px;
+        }
+ /* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
 
 .item,
 .active,
@@ -59,11 +98,17 @@ body {
   height: 100%;
 }
 
+#letters{
+    font-family:'Times New Roman', Times, serif;
+
+}
+
 .fill {
   width: 100%;
   height: 100%;
   background-position: center;
-  background-size: cover;
+  background-size:cover;
+
 }
 
 /* Social Icons Styles */
@@ -92,6 +137,10 @@ body {
   color: #d14836;
 }
 
+.abc{
+    background-image:url('https://s-media-cache-ak0.pinimg.com/736x/41/b1/07/41b107dcb4afa930bfc7c951b43e1664.jpg')
+   
+}
 /* Service Page Styles */
 .service-icon {
   font-size: 50px;

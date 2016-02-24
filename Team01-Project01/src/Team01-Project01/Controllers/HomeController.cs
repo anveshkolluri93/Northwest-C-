@@ -33,6 +33,18 @@ namespace Team01_Project01.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult Signup()
+        {
+            return View();
+        }
+        public IActionResult schedulee()
+        {
+            return View();
+        }
         public IActionResult Error()
         {
             return View();

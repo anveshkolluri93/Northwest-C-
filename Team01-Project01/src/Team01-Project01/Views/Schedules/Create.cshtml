@@ -4,48 +4,61 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<body class="abc" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQSEhUUEhQWFBQUFxcXFxcXFxcXHBUYFBcXHBQcGBwYHCggHBolHBcXIjEiJSkrLi4uHB8zODMsNygtLisBCgoKDAwNDgwPGisZExkrKysrKysrKysrKysrNywrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAJcBTQMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAIBABAQEBAQABBAMAAAAAAAAAAAER8GFRAkGBsXGRwf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7DRFoh39ILQDAA0RYAi4AYGICpVO70EUICKAIouAhgYBRMUBBQAAIAAUhQDAwARb3fAJ39AtAAAqCgind6AimGgYABEUBF7vSGAQwARQkBMUJQIEKAkUARaAWIKB+0UALDQChTQRe7woAQwoIoAlXA3vgAgAQIT8AgpgBCIC2FRQTFRbQBFBKKAaBgAUATBQAQFEighqgBTAFRFBMXEWAUSgKlUARTACB9wKVF7vATFQ+qgRYaABoAEAIaUA7vUXCd3yAmC2gFDQA0AiL3eABKigkFO7wEXu9IABpoCKAUEBdABFKaCRYaABpoFCAEBAWItASKEoFglUAlMADTADu9CEgFRYAGABAiYCmnd4mAoAItMO7wEFADO77GoClRcANCAd3gi2AQLAEihALBKoBP5hhoBhQEXABJVACAkBQSAsDADANAiKYAABond6sAAAAAxFiTu+AWgAi6JQWlJ3fBQAADABFRQRQAh+BIAtSRQDBAXu9IUzu+4AkUANAA7vUBRFkAwiLACkQFLAlAAAIlANUKAAAFgAJq6AAAJIAd3i4J3eAoUwClSAKWpKugmLoQAKUARZAIimgEEBYi6AQgAAgKEAKYAFoi6CVYQApQAogChf0Ailvd90oKU00EW0ACQpQFn5ZWACRZQIBgEoABUi4CKUBFTQFO/kKBTSgHd4CUF7vUXCAQT6TQUsSqAGgJq6SABAAqRUsBUW93wgKI1KCGBgEoUAT6vSLYASgBgACKAagAKABigIKAiKAaACAApAAwoAaYAGgAAAgoCf41gAhAAAAAA1AB//2Q==')">
+    <div>
+        <br />
 
-<form asp-action="Create">
-    <div class="form-horizontal">
-        <h4>Schedule</h4>
-        <hr />
-        <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="date" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="date" class="form-control" />
-                <span asp-validation-for="date" class="text-danger" />
+
+
+        <form method="post" action="action.php" class="col-md-3">
+            <div>
+                <b>Number of Courses:</b>
+                <select id="num_courses" class="form-control col-sm-6">
+                    <option value="0">Select Number of Courses</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="facultyId" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="facultyId" class="form-control" />
-                <span asp-validation-for="facultyId" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="time" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="time" class="form-control" />
-                <span asp-validation-for="time" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+
+            <div id="courseList"></div>
+            <br /><br />
+            <br />
+
+            <div class="col-md-5"><a asp-controller="Home" asp-action="schedulee" class="btn btn-success btn-block btn-lg">Search</a></div>
+        </form>
+
     </div>
-</form>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
-@section Scripts {
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-}
+    @section Scripts {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                $('#num_courses').change(function () {
+                    //get the number of fields required from the dropdown box
+                    var num = $('#num_courses').val();
+
+                    var i = 0;
+                    var html = '';
+                    for (i = 1; i <= num; i++) {
+                        //concatinate number of fields to a variable
+                        html += 'Course ' + i + ': <input type="text" class="form-control" name="category-' + i + '"/><br/>';
+                    }
+
+
+                    $('#courseList').html(html);
+                });
+            });
+        </script>
+    }
+</body>
