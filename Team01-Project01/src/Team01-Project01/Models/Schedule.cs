@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +10,8 @@ namespace Team01_Project01.Models
 {
     public class Schedule
     {
-            [ScaffoldColumn(false)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [ScaffoldColumn(false)]
             [Key]
             [Required]
             [Display(Name = "Schedule Number")]
@@ -21,7 +24,7 @@ namespace Team01_Project01.Models
             [Display(Name = "Date")]
             public DateTime date { get; set; }
             [Display(Name = "Time")]
-            public int time { get; set; }
+            public string time { get; set; }
 
             [Display(Name = "Students key")]
             [ScaffoldColumn(false)]
@@ -37,7 +40,36 @@ namespace Team01_Project01.Models
 
             [Display(Name = "Location key")]
             [ScaffoldColumn(false)]
-            public string locationId { get; set; }
+            public int locationId { get; set; }
+
+        public static List<Schedule> ReadAllFromCSV(string filepath)
+        {
+            List<Schedule> lst = File.ReadAllLines(filepath)
+                                         .Skip(1)
+                                         .Select(v => Schedule.OneFromCsv(v))
+                                         .ToList();
+            return lst;
+        }
+        public static Schedule OneFromCsv(string csvLine)
+        {
+            string[] values = csvLine.Split(',');
+            Schedule item = new Schedule();
+
+            int i = 0;
+            item.ScheduleNumber = Convert.ToInt32(values[i++]);
+            item.facultyId = Convert.ToString(values[i++]);
+           
+            item.date = Convert.ToDateTime(values[i++]);
+            item.time = Convert.ToString(values[i++]);
+            item.studentId = Convert.ToString(values[i++]);
+            item.courseId = Convert.ToInt32(values[i++]);
+            item.sectionId = Convert.ToInt32(values[i++]);
+            item.locationId = Convert.ToInt32(values[i++]);
+           
+
+
+            return item;
+        }
 
     }
 }

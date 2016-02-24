@@ -4,17 +4,14 @@ using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using Team01_Project01.Models;
 
-
-namespace Team01Project01.Controllers
+namespace Team01_Project01.Controllers
 {
     public class SchedulesController : Controller
     {
-
         private AppDbContext _context;
 
         public SchedulesController(AppDbContext context)
         {
-
             _context = context;    
         }
 
