@@ -8,7 +8,7 @@ using Team01_Project01.Models;
 namespace Team01Project01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20160224032432_init")]
+    [Migration("20160224034325_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,8 +99,7 @@ namespace Team01Project01.Migrations
 
             modelBuilder.Entity("Team01_Project01.Models.Students", b =>
                 {
-                    b.Property<int>("studentId")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("studentId");
 
                     b.Property<string>("CRN");
 

@@ -98,8 +98,7 @@ namespace Team01Project01.Migrations
 
             modelBuilder.Entity("Team01_Project01.Models.Students", b =>
                 {
-                    b.Property<int>("studentId")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("studentId");
 
                     b.Property<string>("CRN");
 

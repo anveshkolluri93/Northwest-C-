@@ -85,8 +85,7 @@ namespace Team01Project01.Migrations
                 name: "Students",
                 columns: table => new
                 {
-                    studentId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    studentId = table.Column<int>(nullable: false),
                     CRN = table.Column<string>(nullable: true),
                     CourseId = table.Column<string>(nullable: true),
                     FirstMidName = table.Column<string>(nullable: true),
