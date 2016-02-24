@@ -11,13 +11,12 @@ namespace Team01_Project01.Models
             [ScaffoldColumn(false)]
             [Key]
             [Required]
-            [Display(Name = "Course Number")]
-            public int CRN { get; set; }
+            [Display(Name = "Schedule Number")]
+            public int ScheduleNumber { get; set; }
 
             [Required]
             [Display(Name = "Faculty Available")]
             public string  facultyId{ get; set; }
-            
             
             [Display(Name = "Date")]
             public DateTime date { get; set; }

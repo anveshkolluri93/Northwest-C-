@@ -11,7 +11,7 @@ namespace Team01_Project01.Models
             [ScaffoldColumn(false)]
             [Key]
             public int studentId { get; set; }
-
+         
             [Required]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
