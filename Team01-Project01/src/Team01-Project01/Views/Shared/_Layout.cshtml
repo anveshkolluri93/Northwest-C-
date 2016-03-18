@@ -10,7 +10,7 @@
   
     <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("/css/Team01.css")" rel="stylesheet">
-    <!--  <environment names="Development">
+     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
@@ -20,7 +20,7 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-    -->
+    
    
 </head>
 <body>
@@ -41,14 +41,16 @@
                             <a asp-controller="Home" asp-action="Contact"><b>ContactUs</b></a>
                         </li>
                         <li><a asp-controller="Schedules" asp-action="Create">Registration</a></li>
-                        <li><a asp-controller="Students" asp-action="Index">Student Details</a></li>
-                        <li><a asp-controller="Schedules" asp-action="Index">Schedules Available</a></li>
+                        <li><a id="sd" asp-controller="Students" asp-action="Index">Student Details</a></li>
+                        <li><a id="sa"asp-controller="Schedules" asp-action="Index">Schedules Available</a></li>
 
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a asp-controller="Home" asp-action="Signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
+                    <div id="sign_lbl">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a asp-controller="Home" asp-action="Signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -88,6 +90,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="@Url.Content("/js/bootstrap.js")"></script>
         <script src="@Url.Content("/js/modern-business.js")"></script>
+    
         @RenderSection("scripts", required: false)
+
     </body>
 </html>

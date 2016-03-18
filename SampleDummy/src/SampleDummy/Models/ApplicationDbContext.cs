@@ -18,5 +18,6 @@ namespace SampleDummy.Models
             // Add your customizations after calling base.OnModelCreating(builder);
         }
         public DbSet<dummy> dummy { get; set; }
+        public DbSet<Actor> Actor { get; set; }
     }
 }
