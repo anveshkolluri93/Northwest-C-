@@ -1,0 +1,30 @@
+@model Team01_Project01.Models.Location
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.buildingId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.buildingId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.roomNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.roomNumber)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.locationId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>

@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Contact <small>We'd Love to Hear From You!</small></h1>
+
+        </div>
+
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-sm-8">
+
+            
+            <form action="__" method="POST" role="form">
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="input1">Name</label>
+                        <input type="text" id="input1" required placeholder="Your name " class="form-control" name="contact_name">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input2">Email Address</label>
+
+                        <input type="email" id="input2" required placeholder="Enter a valid email address" class="form-control" name="contact_email">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input3">Phone Number</label>
+                        <input type="tel" id="input3" class="form-control" placeholder="Format: +99(99)9999-9999)" required pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' name="contact_phone">
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-12">
+                        <label for="input4">Message</label>
+                        <textarea id="input4" rows="6" class="form-control" placeholder="About the app.." name="contact_message"></textarea>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <input type="hidden" value="contact" name="save">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div><!-- /.row -->
+
+</div>
