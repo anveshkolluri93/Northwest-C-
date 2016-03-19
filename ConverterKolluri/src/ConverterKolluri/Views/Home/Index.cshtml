@@ -1,0 +1,27 @@
+﻿@model ConverterKolluri.Models.Converter
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="col-xs-12">
+    <form asp-controller="Home" asp-action="Convert" method="post" class="form-horizontal" role="form">
+
+        <div class="form-group">
+            <label asp-for="Zipcode" class="control-label"></label>
+            <input asp-for="Zipcode" class="form-control" />
+            <span asp-validation-for="Zipcode" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Temperature_F"></label>
+            <input asp-for="Temperature_F" class="form-control" />
+            <span asp-validation-for="Temperature_F" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Convert" class="btn btn-info" />
+        </div>
+
+    </form>
+</div>
+
+<h2>@ViewData["Result"]</h2>
