@@ -1,0 +1,93 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] - Team01 Project</title>
+
+  
+    <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/Team01.css")" rel="stylesheet">
+    <!--  <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    -->
+   
+</head>
+<body>
+
+   
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="color:cadetblue">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand glyphicon glyphicon-home" style="color: white" asp-controller="Home" asp-action="Index"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+
+                        <li><a asp-controller="Home" asp-action="About"><b>About</b></a></li>
+
+                        <li>
+                            <a asp-controller="Home" asp-action="Contact"><b>ContactUs</b></a>
+                        </li>
+                        <li><a asp-controller="Schedules" asp-action="Create">Registration</a></li>
+                        <li><a asp-controller="Students" asp-action="Index">Student Details</a></li>
+                        <li><a asp-controller="Schedules" asp-action="Index">Schedules Available</a></li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a asp-controller="Home" asp-action="Signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+
+       
+      
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+               
+                <!-- /.navbar-collapse -->
+
+           
+
+            <!-- /.container -->
+        </nav>
+        <!--<environment names="Development">
+              <script src="~/lib/jquery/dist/jquery.js"></script>
+              <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+              <script src="~/js/site.js" asp-append-version="true"></script>
+          </environment>
+          <environment names="Staging,Production">
+              <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
+                      asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                      asp-fallback-test="window.jQuery">
+              </script>
+              <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
+                      asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                      asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+              </script>
+              <script src="~/js/site.min.js" asp-append-version="true"></script>
+          </environment>-->
+
+        @RenderBody()
+
+        
+        <!-- /.container -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="@Url.Content("/js/bootstrap.js")"></script>
+        <script src="@Url.Content("/js/modern-business.js")"></script>
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
