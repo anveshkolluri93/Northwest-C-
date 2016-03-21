@@ -10,25 +10,19 @@ namespace Team01_Project01.Models
 {
     public class Schedule
     {
-            [DatabaseGenerated(DatabaseGeneratedOption.None)]
+            
             [ScaffoldColumn(false)]
             [Key]
-            [Required]
-            [Display(Name = "Schedule Number")]
+           
             public int ScheduleId { get; set; }
 
-           
             [Display(Name = "Date")]
             [DataType(DataType.Date)]
             public DateTime date { get; set; }
 
             [Display(Name = "Time")]
-
             public string time { get; set; }
 
-
-
-        
         [Display(Name = "Faculty Available")]
         public string facultyId { get; set; }
         public virtual Faculty Faculty { get; set; }
@@ -47,10 +41,6 @@ namespace Team01_Project01.Models
         [Display(Name = "Location key")]
         public int locationId { get; set; }
         public virtual Location Location { get; set; }
-
-
-        
-           
 
         public static List<Schedule> ReadAllFromCSV(string filepath)
         {
@@ -75,8 +65,6 @@ namespace Team01_Project01.Models
             item.courseId = Convert.ToInt32(values[i++]);
             item.sectionId = Convert.ToInt32(values[i++]);
             item.locationId = Convert.ToInt32(values[i++]);
-           
-
 
             return item;
         }

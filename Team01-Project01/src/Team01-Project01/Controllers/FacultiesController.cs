@@ -30,7 +30,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
+            Faculty faculty = _context.Faculties.Single(m => m.FacultyId == id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -67,7 +67,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
+            Faculty faculty = _context.Faculties.Single(m => m.FacultyId == id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -98,7 +98,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
+            Faculty faculty = _context.Faculties.Single(m => m.FacultyId == id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -112,7 +112,7 @@ namespace Team01Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
+            Faculty faculty = _context.Faculties.Single(m => m.FacultyId == id);
             _context.Faculties.Remove(faculty);
             _context.SaveChanges();
             return RedirectToAction("Index");

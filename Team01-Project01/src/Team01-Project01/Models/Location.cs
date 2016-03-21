@@ -10,10 +10,11 @@ namespace Team01_Project01.Models
     {
         [ScaffoldColumn(false)]
         [Key]
-        public int locationId { get; set; }
-        [Required]
-        [Display(Name = "building Id")]
-        public string buildingId { get; set; }
+        public int LocationId { get; set; }
+        
+
+        [Display(Name = "buildingName")]
+        public string buildingName { get; set; }
 
         [Display(Name = "Room Number")]
         public string roomNumber { get; set; }

@@ -13,7 +13,7 @@ namespace Team01_Project01.Models
 
         [ScaffoldColumn(false)]
         [Key]
-        public int sectionId { get; set; }
+        public int SectionId { get; set; }
 
         [Range(0,41)]
         [Display(Name ="Capacity")]
@@ -22,12 +22,18 @@ namespace Team01_Project01.Models
 
         [Required]
         [Display(Name = "Location key")]
-        public string locationId { get; set; }
+        public string LocationId { get; set; }
+        public virtual Location Location { get; set; }
 
         [Display(Name = "Course key")]
-        public string courseId { get; set; }
+        public string CoursesId { get; set; }
+        public virtual Courses Courses { get; set; }
 
         [Display(Name = "Faculty key")]
-        public string facultyId { get; set; }
+        public string FacultyId { get; set; }
+        public virtual Faculty Faculty { get; set; }
+
+
+
     }
 }

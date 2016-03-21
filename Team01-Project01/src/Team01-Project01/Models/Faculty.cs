@@ -10,13 +10,13 @@ namespace Team01_Project01.Models
     {
         [ScaffoldColumn(false)]
         [Key]
-        public int facultyId { get; set; }
+        public int FacultyId { get; set; }
         [Required]
 
-        [Display(Name = "Last Name")]
+        [Display(Name = "LastName")]
         public string LastName { get; set; }
 
-        [Display(Name = "First Name")]
+        [Display(Name = "FirstName")]
         public string FirstMidName { get; set; }
 
 

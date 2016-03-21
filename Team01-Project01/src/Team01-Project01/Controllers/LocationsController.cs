@@ -29,7 +29,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Location location = _context.Locations.Single(m => m.locationId == id);
+            Location location = _context.Locations.Single(m => m.LocationId == id);
             if (location == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Location location = _context.Locations.Single(m => m.locationId == id);
+            Location location = _context.Locations.Single(m => m.LocationId == id);
             if (location == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Location location = _context.Locations.Single(m => m.locationId == id);
+            Location location = _context.Locations.Single(m => m.LocationId == id);
             if (location == null)
             {
                 return HttpNotFound();
@@ -111,7 +111,7 @@ namespace Team01Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Location location = _context.Locations.Single(m => m.locationId == id);
+            Location location = _context.Locations.Single(m => m.LocationId == id);
             _context.Locations.Remove(location);
             _context.SaveChanges();
             return RedirectToAction("Index");

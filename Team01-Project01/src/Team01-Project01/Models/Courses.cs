@@ -9,13 +9,12 @@ namespace Team01_Project01.Models
 {
     public class Courses
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ScaffoldColumn(false)]
-        [Required]
-        [Key]
-        public int courseId { get; set; }
         
-        [Display(Name = "Course Name")]                  
+        [ScaffoldColumn(false)]
+        [Key]
+        public int CoursesId { get; set; }
+        
+        [Display(Name = "CourseName")]                  
         public string courseName { get; set; }
 
         [Display(Name = "course Duration")]
@@ -38,7 +37,7 @@ namespace Team01_Project01.Models
             Courses item = new Courses();
 
             int i = 0;
-            item.courseId = Convert.ToInt32(values[i++]);
+            item.CoursesId = Convert.ToInt32(values[i++]);
             item.courseName = Convert.ToString(values[i++]);
             item.duration = Convert.ToString(values[i++]);
             item.credits = Convert.ToDouble(values[i++]);
