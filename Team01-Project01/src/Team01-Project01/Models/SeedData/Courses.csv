@@ -1,6 +1,101 @@
-courseId,courseName,duration,credits
-1,C#,4 Months,4
-2,C#,4 Months,4
-3,C#,4 Months,4
-4,C#,4 Months,4
-5,C#,4 Months,4
+id,Course,duration,Credits
+1,Java,1 month,2
+2,Web applications,2 months,1
+3,Java,1 month,3
+4,C,4 months,3
+5,Android,1 month,3
+6,Ruby,4 months,1
+7,C#,4 months,2
+8,HCI,3 months,4
+9,NS,3 months,2
+10,Web applications,1 month,1
+11,Web applications,3 months,1
+12,Project Management,6 months,2
+13,Web applications,3 months,4
+14,IOS,4 months,2
+15,HCI,4 months,1
+16,HCI,1 month,2
+17,NS,4 months,3
+18,Android,1 month,3
+19,Web applications,4 months,4
+20,Project Management,4 months,4
+21,Game Development,4 months,4
+22,NS,2 months,2
+23,IT management,3 months,4
+24,Android,6 months,4
+25,IOS,6 months,2
+26,Game Development,3 months,4
+27,Web applications,2 months,4
+28,NS,4 months,1
+29,IT management,6 months,2
+30,Java,6 months,3
+31,Algorithms,4 months,3
+32,IOS,6 months,3
+33,Ruby,3 months,4
+34,Android,1 month,4
+35,Python,3 months,1
+36,IT management,6 months,1
+37,HCI,3 months,4
+38,HCI,6 months,4
+39,Web applications,6 months,2
+40,Web applications,1 month,1
+41,Discrete Mathematics,2 months,4
+42,Python,6 months,4
+43,Ruby,6 months,3
+44,HCI,1 month,1
+45,Game Development,2 months,3
+46,Web applications,1 month,1
+47,Algorithms,6 months,1
+48,Web applications,1 month,2
+49,NS,6 months,4
+50,CPP,3 months,2
+51,Web applications,6 months,4
+52,C#,6 months,1
+53,Java,4 months,1
+54,Python,2 months,1
+55,Python,1 month,2
+56,C#,6 months,2
+57,Project Management,1 month,3
+58,Python,4 months,3
+59,C#,6 months,3
+60,C#,6 months,4
+61,C#,2 months,2
+62,Algorithms,3 months,4
+63,Discrete Mathematics,1 month,1
+64,Ruby,1 month,4
+65,Discrete Mathematics,6 months,1
+66,Python,3 months,3
+67,NS,3 months,2
+68,C#,1 month,3
+69,NS,4 months,2
+70,Python,2 months,4
+71,CPP,4 months,3
+72,Web applications,3 months,2
+73,Project Management,1 month,1
+74,Python,6 months,1
+75,C,3 months,4
+76,Project Management,4 months,3
+77,HCI,1 month,4
+78,Game Development,1 month,1
+79,Game Development,6 months,1
+80,CPP,2 months,3
+81,IT management,1 month,2
+82,Project Management,3 months,3
+83,C,2 months,3
+84,IT management,2 months,3
+85,CPP,2 months,2
+86,C#,6 months,4
+87,C,6 months,3
+88,NS,1 month,4
+89,IT management,2 months,2
+90,C,1 month,2
+91,Discrete Mathematics,1 month,4
+92,IT management,2 months,4
+93,Android,2 months,2
+94,C#,3 months,3
+95,Web applications,2 months,3
+96,Discrete Mathematics,4 months,3
+97,Discrete Mathematics,4 months,2
+98,HCI,2 months,2
+99,Game Development,4 months,1
+100,Java,3 months,2

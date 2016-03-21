@@ -19,16 +19,13 @@ namespace Team01_Project01.Models
 
             [Required]
             [Display(Name = "Faculty Available")]
-            public string  facultyId{ get; set; }
+        [ScaffoldColumn(false)]
+        public string  facultyId{ get; set; }
             
             [Display(Name = "Date")]
             public DateTime date { get; set; }
             [Display(Name = "Time")]
             public string time { get; set; }
-
-            [Display(Name = "Students key")]
-            [ScaffoldColumn(false)]
-            public string studentId { get; set; }
 
         [Display(Name = "Course key")]
         [ScaffoldColumn(false)]
@@ -57,17 +54,13 @@ namespace Team01_Project01.Models
 
             int i = 0;
             item.ScheduleNumber = Convert.ToInt32(values[i++]);
-            item.facultyId = Convert.ToString(values[i++]);
-           
             item.date = Convert.ToDateTime(values[i++]);
             item.time = Convert.ToString(values[i++]);
-            item.studentId = Convert.ToString(values[i++]);
+            item.facultyId = Convert.ToString(values[i++]);
             item.courseId = Convert.ToInt32(values[i++]);
             item.sectionId = Convert.ToInt32(values[i++]);
             item.locationId = Convert.ToInt32(values[i++]);
            
-
-
             return item;
         }
 

@@ -17,6 +17,5 @@ namespace Team01_Project01.Models
 
         [Display(Name = "Room Number")]
         public string roomNumber { get; set; }
-        public double Longitude { get; internal set; }
     }
 }

@@ -25,6 +25,7 @@ namespace Team01_Project01.Models
         [Display(Name = "Schedule key")]
         public string CRN { get; set; }
 
+
         [Display(Name = "Course Name")]
         public string CourseId { get; set; }
 
