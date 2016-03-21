@@ -20,10 +20,10 @@ namespace Team01_Project01.Models
         }
 
         public DbSet<Students> Students { get; set; } 
-        public DbSet<Faculty> Faculty { get; set; }
-        public DbSet<Location> Location { get; set; }
-        public DbSet<Schedule> Schedule { get; set; }
+        public DbSet<Faculty> Faculties { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Courses> Courses { get; set; }
-        public DbSet<Section> Section { get; set; }
+        public DbSet<Section> Sections { get; set; }
     }
 }

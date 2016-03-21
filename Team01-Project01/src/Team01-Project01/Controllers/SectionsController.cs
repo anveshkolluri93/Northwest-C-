@@ -18,7 +18,7 @@ namespace Team01Project01.Controllers
         // GET: Sections
         public IActionResult Index()
         {
-            return View(_context.Section.ToList());
+            return View(_context.Sections.ToList());
         }
 
         // GET: Sections/Details/5
@@ -29,7 +29,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Section section = _context.Section.Single(m => m.sectionId == id);
+            Section section = _context.Sections.Single(m => m.sectionId == id);
             if (section == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Team01Project01.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Section.Add(section);
+                _context.Sections.Add(section);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Section section = _context.Section.Single(m => m.sectionId == id);
+            Section section = _context.Sections.Single(m => m.sectionId == id);
             if (section == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Section section = _context.Section.Single(m => m.sectionId == id);
+            Section section = _context.Sections.Single(m => m.sectionId == id);
             if (section == null)
             {
                 return HttpNotFound();
@@ -111,8 +111,8 @@ namespace Team01Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Section section = _context.Section.Single(m => m.sectionId == id);
-            _context.Section.Remove(section);
+            Section section = _context.Sections.Single(m => m.sectionId == id);
+            _context.Sections.Remove(section);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

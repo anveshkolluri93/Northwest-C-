@@ -19,7 +19,7 @@ namespace Team01Project01.Controllers
         // GET: Faculties
         public IActionResult Index()
         {
-            return View(_context.Faculty.ToList());
+            return View(_context.Faculties.ToList());
         }
 
         // GET: Faculties/Details/5
@@ -30,7 +30,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Faculty faculty = _context.Faculty.Single(m => m.facultyId == id);
+            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -52,7 +52,7 @@ namespace Team01Project01.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Faculty.Add(faculty);
+                _context.Faculties.Add(faculty);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -67,7 +67,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Faculty faculty = _context.Faculty.Single(m => m.facultyId == id);
+            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -98,7 +98,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Faculty faculty = _context.Faculty.Single(m => m.facultyId == id);
+            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -112,8 +112,8 @@ namespace Team01Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Faculty faculty = _context.Faculty.Single(m => m.facultyId == id);
-            _context.Faculty.Remove(faculty);
+            Faculty faculty = _context.Faculties.Single(m => m.facultyId == id);
+            _context.Faculties.Remove(faculty);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -28,6 +28,8 @@ namespace Team01_Project01.Models
         [Display(Name = "Course Name")]
         public string CourseId { get; set; }
 
+        
+
         public static List<Students> ReadAllFromCSV(string filepath)
         {
             List<Students> lst = File.ReadAllLines(filepath)
@@ -47,12 +49,6 @@ namespace Team01_Project01.Models
             item.FirstMidName = Convert.ToString(values[i++]);
             item.CRN = Convert.ToString(values[i++]);
             item.CourseId = Convert.ToString(values[i++]);
-           
-
-
-
-
-
             return item;
         }
 
