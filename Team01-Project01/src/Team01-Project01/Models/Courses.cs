@@ -9,11 +9,14 @@ namespace Team01_Project01.Models
 {
     public class Courses
     {
-        
+
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [ScaffoldColumn(false)]
+        [Required]
         [Key]
         public int CoursesId { get; set; }
         
+
         [Display(Name = "CourseName")]                  
         public string courseName { get; set; }
 
@@ -21,7 +24,7 @@ namespace Team01_Project01.Models
         public string duration{ get; set; }
 
         [Display(Name = "credit Hours")]
-        public double credits { get; set; }
+        public double credits { get; set; } 
 
         public static List<Courses> ReadAllFromCSV(string filepath)
         {

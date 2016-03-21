@@ -10,11 +10,12 @@ namespace Team01_Project01.Models
 {
     public class Students
     {
-            
-            [ScaffoldColumn(false)]
-            [Key]
+
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [ScaffoldColumn(false)]
+            [Key]            
             public int StudentsId { get; set; }
-         
+            
             [Required]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
@@ -25,10 +26,10 @@ namespace Team01_Project01.Models
             public int ScheduleId { get; set; }
             public virtual Schedule Schedule { get; set; }
 
-            public int CourseId { get; set; }
+            public int CoursesId { get; set; }
             public virtual Courses Courses { get; set; }
 
-        public IEnumerable<object> Student { get; internal set; }
+
 
         public static List<Students> ReadAllFromCSV(string filepath)
         {
@@ -47,7 +48,7 @@ namespace Team01_Project01.Models
             item.StudentsId = Convert.ToInt32(values[i++]);
             item.LastName = Convert.ToString(values[i++]);
             item.FirstMidName = Convert.ToString(values[i++]);
-            item.CourseId = Convert.ToInt32(values[i++]);
+            item.CoursesId = Convert.ToInt32(values[i++]);
             return item;
         }
 
