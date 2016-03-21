@@ -15,7 +15,6 @@ namespace Team01Project01.Controllers
             _context = context;    
         }
 
-
         // GET: Courses
         public IActionResult Index()
         {
