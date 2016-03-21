@@ -1,4 +1,4 @@
-﻿id,first_name,last_name,CRN,courseId
+﻿id,first_name,last_name,Schedule_ID,courseId
 1,Edward,Hawkins,33808,53
 2,Chris,Howell,12668,40
 3,Fred,Cox,30490,26

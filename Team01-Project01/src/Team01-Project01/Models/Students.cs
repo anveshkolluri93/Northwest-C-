@@ -13,7 +13,8 @@ namespace Team01_Project01.Models
             [DatabaseGenerated(DatabaseGeneratedOption.None)]
             [ScaffoldColumn(false)]
             [Key]
-            public int studentId { get; set; }
+            
+            public int StudentsId { get; set; }
          
             [Required]
             [Display(Name = "Last Name")]
@@ -22,13 +23,14 @@ namespace Team01_Project01.Models
             [Display(Name = "First Name")]                           
             public string FirstMidName { get; set; }
 
-            [Display(Name = "Schedule key")]
-       
-            public int scheduleId { get; set; }
+           
+        
+        public int ScheduleId { get; set; }
             public virtual Schedule Schedule { get; set; }
 
-            [Display(Name = "Course key")]
-            public int courseId { get; set; }
+           
+            
+            public int CoursesId { get; set; }
             public virtual Courses Courses { get; set; }
 
 
@@ -47,10 +49,10 @@ namespace Team01_Project01.Models
             Students item = new Students();
 
             int i = 0;
-            item.studentId = Convert.ToInt32(values[i++]);
+            item.StudentsId = Convert.ToInt32(values[i++]);
             item.LastName = Convert.ToString(values[i++]);
             item.FirstMidName = Convert.ToString(values[i++]);
-            item.courseId = Convert.ToInt32(values[i++]);
+            item.CoursesId = Convert.ToInt32(values[i++]);
             return item;
         }
 

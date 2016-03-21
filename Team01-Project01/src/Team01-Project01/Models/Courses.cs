@@ -13,7 +13,7 @@ namespace Team01_Project01.Models
         [ScaffoldColumn(false)]
         [Required]
         [Key]
-        public int courseId { get; set; }
+        public int CoursesId { get; set; }
         
         [Display(Name = "Course Name")]                  
         public string courseName { get; set; }
@@ -38,7 +38,7 @@ namespace Team01_Project01.Models
             Courses item = new Courses();
 
             int i = 0;
-            item.courseId = Convert.ToInt32(values[i++]);
+            item.CoursesId = Convert.ToInt32(values[i++]);
             item.courseName = Convert.ToString(values[i++]);
             item.duration = Convert.ToString(values[i++]);
             item.credits = Convert.ToDouble(values[i++]);

@@ -29,7 +29,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Section section = _context.Sections.Single(m => m.sectionId == id);
+            Section section = _context.Sections.Single(m => m.SectionId == id);
             if (section == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Section section = _context.Sections.Single(m => m.sectionId == id);
+            Section section = _context.Sections.Single(m => m.SectionId == id);
             if (section == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Section section = _context.Sections.Single(m => m.sectionId == id);
+            Section section = _context.Sections.Single(m => m.SectionId == id);
             if (section == null)
             {
                 return HttpNotFound();
@@ -111,7 +111,7 @@ namespace Team01Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Section section = _context.Sections.Single(m => m.sectionId == id);
+            Section section = _context.Sections.Single(m => m.SectionId == id);
             _context.Sections.Remove(section);
             _context.SaveChanges();
             return RedirectToAction("Index");

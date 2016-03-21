@@ -29,7 +29,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
+            Students students = _context.Students.Single(m => m.StudentsId == id);
             if (students == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
+            Students students = _context.Students.Single(m => m.StudentsId == id);
             if (students == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Students students = _context.Students.Single(m => m.studentId == id);
+            Students students = _context.Students.Single(m => m.StudentsId == id);
             if (students == null)
             {
                 return HttpNotFound();
@@ -111,7 +111,7 @@ namespace Team01Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Students students = _context.Students.Single(m => m.studentId == id);
+            Students students = _context.Students.Single(m => m.StudentsId == id);
             _context.Students.Remove(students);
             _context.SaveChanges();
             return RedirectToAction("Index");
