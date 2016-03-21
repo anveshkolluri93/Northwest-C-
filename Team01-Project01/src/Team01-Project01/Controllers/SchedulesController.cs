@@ -15,10 +15,12 @@ namespace Team01_Project01.Controllers
             _context = context;    
         }
 
+
+
         // GET: Schedules
         public IActionResult Index()
         {
-            return View(_context.Schedule.ToList());
+            return View(_context.Schedules.ToList());
         }
 
         // GET: Schedules/Details/5
@@ -29,7 +31,7 @@ namespace Team01_Project01.Controllers
                 return HttpNotFound();
             }
 
-            Schedule schedule = _context.Schedule.Single(m => m.ScheduleNumber == id);
+            Schedule schedule = _context.Schedules.Single(m => m.ScheduleNumber == id);
             if (schedule == null)
             {
                 return HttpNotFound();
@@ -51,7 +53,7 @@ namespace Team01_Project01.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Schedule.Add(schedule);
+                _context.Schedules.Add(schedule);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +68,7 @@ namespace Team01_Project01.Controllers
                 return HttpNotFound();
             }
 
-            Schedule schedule = _context.Schedule.Single(m => m.ScheduleNumber == id);
+            Schedule schedule = _context.Schedules.Single(m => m.ScheduleNumber == id);
             if (schedule == null)
             {
                 return HttpNotFound();
@@ -97,7 +99,7 @@ namespace Team01_Project01.Controllers
                 return HttpNotFound();
             }
 
-            Schedule schedule = _context.Schedule.Single(m => m.ScheduleNumber == id);
+            Schedule schedule = _context.Schedules.Single(m => m.ScheduleNumber == id);
             if (schedule == null)
             {
                 return HttpNotFound();
@@ -111,8 +113,8 @@ namespace Team01_Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Schedule schedule = _context.Schedule.Single(m => m.ScheduleNumber == id);
-            _context.Schedule.Remove(schedule);
+            Schedule schedule = _context.Schedules.Single(m => m.ScheduleNumber == id);
+            _context.Schedules.Remove(schedule);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -17,7 +17,7 @@ namespace Team01_Project01.Models
                 throw new Exception("DB is null");
             }
             context.Courses.RemoveRange(context.Courses);
-            context.Schedule.RemoveRange(context.Schedule);
+            context.Schedules.RemoveRange(context.Schedules);
             context.Students.RemoveRange(context.Students);
             context.SaveChanges();
             SeedCoursesFromCsv(relPath, context);
@@ -47,7 +47,7 @@ namespace Team01_Project01.Models
                 throw new Exception("Cannot find file " + source);
             }
             List<Schedule> lst = Schedule.ReadAllFromCSV(source);
-            context.Schedule.AddRange(lst.ToArray());
+            context.Schedules.AddRange(lst.ToArray());
             context.SaveChanges();
         }
         private static void SeedStudentsFromCsv(string relPath, AppDbContext context)

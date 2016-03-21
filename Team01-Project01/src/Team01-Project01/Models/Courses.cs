@@ -15,7 +15,6 @@ namespace Team01_Project01.Models
         [Key]
         public int courseId { get; set; }
         
-       
         [Display(Name = "Course Name")]                  
         public string courseName { get; set; }
 

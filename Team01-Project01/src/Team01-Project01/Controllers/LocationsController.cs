@@ -18,7 +18,7 @@ namespace Team01Project01.Controllers
         // GET: Locations
         public IActionResult Index()
         {
-            return View(_context.Location.ToList());
+            return View(_context.Locations.ToList());
         }
 
         // GET: Locations/Details/5
@@ -29,7 +29,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Location location = _context.Location.Single(m => m.locationId == id);
+            Location location = _context.Locations.Single(m => m.locationId == id);
             if (location == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Team01Project01.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Location.Add(location);
+                _context.Locations.Add(location);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Location location = _context.Location.Single(m => m.locationId == id);
+            Location location = _context.Locations.Single(m => m.locationId == id);
             if (location == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Team01Project01.Controllers
                 return HttpNotFound();
             }
 
-            Location location = _context.Location.Single(m => m.locationId == id);
+            Location location = _context.Locations.Single(m => m.locationId == id);
             if (location == null)
             {
                 return HttpNotFound();
@@ -111,8 +111,8 @@ namespace Team01Project01.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Location location = _context.Location.Single(m => m.locationId == id);
-            _context.Location.Remove(location);
+            Location location = _context.Locations.Single(m => m.locationId == id);
+            _context.Locations.Remove(location);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
