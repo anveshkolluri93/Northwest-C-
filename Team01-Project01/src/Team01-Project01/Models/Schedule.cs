@@ -10,34 +10,47 @@ namespace Team01_Project01.Models
 {
     public class Schedule
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ScaffoldColumn(false)]
+            [DatabaseGenerated(DatabaseGeneratedOption.None)]
+            [ScaffoldColumn(false)]
             [Key]
             [Required]
             [Display(Name = "Schedule Number")]
-            public int ScheduleNumber { get; set; }
+            public int ScheduleId { get; set; }
 
-            [Required]
-            [Display(Name = "Faculty Available")]
-        [ScaffoldColumn(false)]
-        public string  facultyId{ get; set; }
-            
+           
             [Display(Name = "Date")]
+            [DataType(DataType.Date)]
             public DateTime date { get; set; }
+
             [Display(Name = "Time")]
+
             public string time { get; set; }
 
+
+
+        
+        [Display(Name = "Faculty Available")]
+        public string facultyId { get; set; }
+        public virtual Faculty Faculty { get; set; }
+
+
         [Display(Name = "Course key")]
-        [ScaffoldColumn(false)]
+        
         public int courseId { get; set; }
+        public virtual Courses Courses { get; set; }
 
         [Display(Name = "Section key")]
-            [ScaffoldColumn(false)]
-            public int sectionId { get; set; }
+            
+        public int sectionId { get; set; }
+        public virtual Section Section { get; set; }
 
-            [Display(Name = "Location key")]
-            [ScaffoldColumn(false)]
-            public int locationId { get; set; }
+        [Display(Name = "Location key")]
+        public int locationId { get; set; }
+        public virtual Location Location { get; set; }
+
+
+        
+           
 
         public static List<Schedule> ReadAllFromCSV(string filepath)
         {
@@ -53,14 +66,18 @@ namespace Team01_Project01.Models
             Schedule item = new Schedule();
 
             int i = 0;
-            item.ScheduleNumber = Convert.ToInt32(values[i++]);
+            item.ScheduleId = Convert.ToInt32(values[i++]);
+            item.facultyId = Convert.ToString(values[i++]);
+           
             item.date = Convert.ToDateTime(values[i++]);
             item.time = Convert.ToString(values[i++]);
-            item.facultyId = Convert.ToString(values[i++]);
+            
             item.courseId = Convert.ToInt32(values[i++]);
             item.sectionId = Convert.ToInt32(values[i++]);
             item.locationId = Convert.ToInt32(values[i++]);
            
+
+
             return item;
         }
 
