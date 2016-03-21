@@ -11,9 +11,7 @@ namespace Team01_Project01.Models
     public class Students
     {
             [DatabaseGenerated(DatabaseGeneratedOption.None)]
-            [ScaffoldColumn(false)]
-            [Key]
-            
+           
             public int StudentsId { get; set; }
          
             [Required]
@@ -24,13 +22,12 @@ namespace Team01_Project01.Models
             public string FirstMidName { get; set; }
 
            
-        
-        public int ScheduleId { get; set; }
+            [ScaffoldColumn(true)]
+            public int? ScheduleId { get; set; }
             public virtual Schedule Schedule { get; set; }
 
-           
-            
-            public int CoursesId { get; set; }
+        [ScaffoldColumn(true)]
+        public int? CoursesId { get; set; }
             public virtual Courses Courses { get; set; }
 
 

@@ -8,9 +8,10 @@ using Team01_Project01.Models;
 namespace Team01Project01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160321022931_ijjjj")]
+    partial class ijjjj
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -57,15 +58,18 @@ namespace Team01Project01.Migrations
 
             modelBuilder.Entity("Team01_Project01.Models.Schedule", b =>
                 {
-                    b.Property<int>("ScheduleId");
+                    b.Property<int>("ScheduleId")
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("CoursesId");
+                    b.Property<int>("CoursesId");
 
-                    b.Property<int?>("FacultyId");
+                    b.Property<int?>("FacultyFacultyId");
 
-                    b.Property<int?>("LocationId");
+                    b.Property<string>("FacultyId");
 
-                    b.Property<int?>("SectionId");
+                    b.Property<int>("LocationId");
+
+                    b.Property<int>("SectionId");
 
                     b.Property<DateTime>("date");
 
@@ -76,13 +80,20 @@ namespace Team01Project01.Migrations
 
             modelBuilder.Entity("Team01_Project01.Models.Section", b =>
                 {
-                    b.Property<int>("SectionId");
+                    b.Property<int>("SectionId")
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("CoursesID");
+                    b.Property<int?>("CoursesCoursesId");
 
-                    b.Property<int?>("FacultyId");
+                    b.Property<string>("CoursesID");
 
-                    b.Property<int?>("LocationId");
+                    b.Property<int?>("FacultyFacultyId");
+
+                    b.Property<string>("FacultyId");
+
+                    b.Property<string>("LocationId");
+
+                    b.Property<int?>("LocationLocationId");
 
                     b.Property<int>("capacity");
 
@@ -93,14 +104,14 @@ namespace Team01Project01.Migrations
                 {
                     b.Property<int>("StudentsId");
 
-                    b.Property<int?>("CoursesId");
+                    b.Property<int>("CoursesId");
 
                     b.Property<string>("FirstMidName");
 
                     b.Property<string>("LastName")
                         .IsRequired();
 
-                    b.Property<int?>("ScheduleId");
+                    b.Property<int>("ScheduleId");
 
                     b.HasKey("StudentsId");
                 });
@@ -113,7 +124,7 @@ namespace Team01Project01.Migrations
 
                     b.HasOne("Team01_Project01.Models.Faculty")
                         .WithMany()
-                        .HasForeignKey("FacultyId");
+                        .HasForeignKey("FacultyFacultyId");
 
                     b.HasOne("Team01_Project01.Models.Location")
                         .WithMany()
@@ -128,15 +139,15 @@ namespace Team01Project01.Migrations
                 {
                     b.HasOne("Team01_Project01.Models.Courses")
                         .WithMany()
-                        .HasForeignKey("CoursesID");
+                        .HasForeignKey("CoursesCoursesId");
 
                     b.HasOne("Team01_Project01.Models.Faculty")
                         .WithMany()
-                        .HasForeignKey("FacultyId");
+                        .HasForeignKey("FacultyFacultyId");
 
                     b.HasOne("Team01_Project01.Models.Location")
                         .WithMany()
-                        .HasForeignKey("LocationId");
+                        .HasForeignKey("LocationLocationId");
                 });
 
             modelBuilder.Entity("Team01_Project01.Models.Students", b =>
