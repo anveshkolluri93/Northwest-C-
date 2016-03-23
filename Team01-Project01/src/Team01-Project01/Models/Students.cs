@@ -23,9 +23,6 @@ namespace Team01_Project01.Models
             [Display(Name = "First Name")]                           
             public string FirstMidName { get; set; }
 
-            public int ScheduleId { get; set; }
-            public virtual Schedule Schedule { get; set; }
-
             public int CoursesId { get; set; }
             public virtual Courses Courses { get; set; }
 

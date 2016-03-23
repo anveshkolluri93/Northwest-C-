@@ -18,7 +18,8 @@ namespace Team01Project01.Controllers
         // GET: Students
         public IActionResult Index()
         {
-            return View(_context.Students.ToList());
+            var appDbContext = _context.Students.Include(s => s.Courses);
+            return View(appDbContext.ToList());
         }
 
         // GET: Students/Details/5
@@ -41,6 +42,7 @@ namespace Team01Project01.Controllers
         // GET: Students/Create
         public IActionResult Create()
         {
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses");
             return View();
         }
 
@@ -55,6 +57,7 @@ namespace Team01Project01.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", students.CoursesId);
             return View(students);
         }
 
@@ -71,6 +74,7 @@ namespace Team01Project01.Controllers
             {
                 return HttpNotFound();
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", students.CoursesId);
             return View(students);
         }
 
@@ -85,6 +89,7 @@ namespace Team01Project01.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", students.CoursesId);
             return View(students);
         }
 

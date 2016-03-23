@@ -4,7 +4,7 @@ using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using Team01_Project01.Models;
 
-namespace Team01_Project01.Controllers
+namespace Team01Project01.Controllers
 {
     public class SchedulesController : Controller
     {
@@ -15,12 +15,11 @@ namespace Team01_Project01.Controllers
             _context = context;    
         }
 
-
-
         // GET: Schedules
         public IActionResult Index()
         {
-            return View(_context.Schedules.ToList());
+            var appDbContext = _context.Schedules.Include(s => s.Courses).Include(s => s.Faculties).Include(s => s.Locations);
+            return View(appDbContext.ToList());
         }
 
         // GET: Schedules/Details/5
@@ -43,6 +42,9 @@ namespace Team01_Project01.Controllers
         // GET: Schedules/Create
         public IActionResult Create()
         {
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses");
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties");
+            ViewData["LocationId"] = new SelectList(_context.Locations, "LocationId", "Locations");
             return View();
         }
 
@@ -57,6 +59,9 @@ namespace Team01_Project01.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", schedule.CoursesId);
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties", schedule.FacultyId);
+            ViewData["LocationId"] = new SelectList(_context.Locations, "LocationId", "Locations", schedule.LocationId);
             return View(schedule);
         }
 
@@ -73,6 +78,9 @@ namespace Team01_Project01.Controllers
             {
                 return HttpNotFound();
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", schedule.CoursesId);
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties", schedule.FacultyId);
+            ViewData["LocationId"] = new SelectList(_context.Locations, "LocationId", "Locations", schedule.LocationId);
             return View(schedule);
         }
 
@@ -87,6 +95,9 @@ namespace Team01_Project01.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", schedule.CoursesId);
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties", schedule.FacultyId);
+            ViewData["LocationId"] = new SelectList(_context.Locations, "LocationId", "Locations", schedule.LocationId);
             return View(schedule);
         }
 

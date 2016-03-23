@@ -8,7 +8,6 @@ namespace Team01Project01.Controllers
 {
     public class FacultiesController : Controller
     {
-
         private AppDbContext _context;
 
         public FacultiesController(AppDbContext context)

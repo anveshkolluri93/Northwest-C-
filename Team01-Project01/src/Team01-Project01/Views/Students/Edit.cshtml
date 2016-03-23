@@ -12,17 +12,10 @@
         <hr />
         <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="CRN" class="col-md-2 control-label"></label>
+            <label asp-for="CoursesId" class="control-label col-md-2">CoursesId</label>
             <div class="col-md-10">
-                <input asp-for="CRN" class="form-control" />
-                <span asp-validation-for="CRN" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="CourseId" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="CourseId" class="form-control" />
-                <span asp-validation-for="CourseId" class="text-danger" />
+                <select asp-for="CoursesId" class="form-control" />
+                <span asp-validation-for="CoursesId" class="text-danger" />
             </div>
         </div>
         <div class="form-group">

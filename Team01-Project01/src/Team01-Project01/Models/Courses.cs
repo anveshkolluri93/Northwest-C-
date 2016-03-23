@@ -16,7 +16,6 @@ namespace Team01_Project01.Models
         [Key]
         public int CoursesId { get; set; }
         
-
         [Display(Name = "CourseName")]                  
         public string courseName { get; set; }
 
@@ -24,7 +23,11 @@ namespace Team01_Project01.Models
         public string duration{ get; set; }
 
         [Display(Name = "credit Hours")]
-        public double credits { get; set; } 
+        public int credits { get; set; }
+
+        public virtual ICollection<Section> Sections { get; set; }
+        public virtual ICollection<Students> Students { get; set; }
+        public virtual ICollection<Schedule> Schedules { get; set; }
 
         public static List<Courses> ReadAllFromCSV(string filepath)
         {
@@ -43,7 +46,7 @@ namespace Team01_Project01.Models
             item.CoursesId = Convert.ToInt32(values[i++]);
             item.courseName = Convert.ToString(values[i++]);
             item.duration = Convert.ToString(values[i++]);
-            item.credits = Convert.ToDouble(values[i++]);
+            item.credits = Convert.ToInt32(values[i++]);
            
             return item;
         }

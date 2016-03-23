@@ -12,29 +12,26 @@ namespace Team01_Project01.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [ScaffoldColumn(false)]
-            [Key]
-            [Required]
+            [Key]            
             public int ScheduleId { get; set; }
-
            
             [Display(Name = "Date")]
             [DataType(DataType.Date)]
             public DateTime date { get; set; }
 
-            [Display(Name = "Time")]
-            public string time { get; set; }
 
         public int FacultyId { get; set; }
-        public virtual Faculty Faculty { get; set; }
+        public virtual Faculty Faculties { get; set; }
 
         public int CoursesId { get; set; }
         public virtual Courses Courses { get; set; }
             
-        public int SectionId { get; set; }
-        public virtual Section Section { get; set; }
+       // public int SectionId { get; set; }
+       // public virtual Section Sections { get; set; }
 
         public int LocationId { get; set; }
-        public virtual Location Location { get; set; }
+        public virtual Location Locations { get; set; }
+
 
         public static List<Schedule> ReadAllFromCSV(string filepath)
         {
@@ -50,12 +47,11 @@ namespace Team01_Project01.Models
             Schedule item = new Schedule();
 
             int i = 0;
-            item.ScheduleId = Convert.ToInt32(values[i++]);
-            item.FacultyId = Convert.ToInt32(values[i++]);
+            item.ScheduleId = Convert.ToInt32(values[i++]);            
             item.date = Convert.ToDateTime(values[i++]);
-            item.time = Convert.ToString(values[i++]);
+            item.FacultyId = Convert.ToInt32(values[i++]);
             item.CoursesId = Convert.ToInt32(values[i++]);
-            item.SectionId = Convert.ToInt32(values[i++]);
+            //item.SectionId = Convert.ToInt32(values[i++]);
             item.LocationId = Convert.ToInt32(values[i++]);
 
             return item;

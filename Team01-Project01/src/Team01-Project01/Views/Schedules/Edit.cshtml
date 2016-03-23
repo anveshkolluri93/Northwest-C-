@@ -12,24 +12,31 @@
         <hr />
         <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
         <div class="form-group">
+            <label asp-for="CoursesId" class="control-label col-md-2">CoursesId</label>
+            <div class="col-md-10">
+                <select asp-for="CoursesId" class="form-control" />
+                <span asp-validation-for="CoursesId" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FacultyId" class="control-label col-md-2">FacultyId</label>
+            <div class="col-md-10">
+                <select asp-for="FacultyId" class="form-control" />
+                <span asp-validation-for="FacultyId" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LocationId" class="control-label col-md-2">LocationId</label>
+            <div class="col-md-10">
+                <select asp-for="LocationId" class="form-control" />
+                <span asp-validation-for="LocationId" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
             <label asp-for="date" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="date" class="form-control" />
                 <span asp-validation-for="date" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="facultyId" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="facultyId" class="form-control" />
-                <span asp-validation-for="facultyId" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="time" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="time" class="form-control" />
-                <span asp-validation-for="time" class="text-danger" />
             </div>
         </div>
         <div class="form-group">

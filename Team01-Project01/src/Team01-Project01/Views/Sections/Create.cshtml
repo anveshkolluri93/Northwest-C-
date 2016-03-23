@@ -12,31 +12,22 @@
         <hr />
         <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
         <div class="form-group">
+            <label asp-for="CoursesId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="CoursesId" class ="form-control"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FacultyId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="FacultyId" class ="form-control"></select>
+            </div>
+        </div>
+        <div class="form-group">
             <label asp-for="capacity" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="capacity" class="form-control" />
                 <span asp-validation-for="capacity" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="courseId" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="courseId" class="form-control" />
-                <span asp-validation-for="courseId" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="facultyId" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="facultyId" class="form-control" />
-                <span asp-validation-for="facultyId" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="locationId" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="locationId" class="form-control" />
-                <span asp-validation-for="locationId" class="text-danger" />
             </div>
         </div>
         <div class="form-group">

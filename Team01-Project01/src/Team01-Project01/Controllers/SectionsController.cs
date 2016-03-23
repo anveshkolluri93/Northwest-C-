@@ -18,7 +18,8 @@ namespace Team01Project01.Controllers
         // GET: Sections
         public IActionResult Index()
         {
-            return View(_context.Sections.ToList());
+            var appDbContext = _context.Sections.Include(s => s.Courses).Include(s => s.Faculties);
+            return View(appDbContext.ToList());
         }
 
         // GET: Sections/Details/5
@@ -41,6 +42,8 @@ namespace Team01Project01.Controllers
         // GET: Sections/Create
         public IActionResult Create()
         {
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses");
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties");
             return View();
         }
 
@@ -55,6 +58,8 @@ namespace Team01Project01.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", section.CoursesId);
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties", section.FacultyId);
             return View(section);
         }
 
@@ -71,6 +76,8 @@ namespace Team01Project01.Controllers
             {
                 return HttpNotFound();
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", section.CoursesId);
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties", section.FacultyId);
             return View(section);
         }
 
@@ -85,6 +92,8 @@ namespace Team01Project01.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewData["CoursesId"] = new SelectList(_context.Courses, "CoursesId", "Courses", section.CoursesId);
+            ViewData["FacultyId"] = new SelectList(_context.Faculties, "FacultyId", "Faculties", section.FacultyId);
             return View(section);
         }
 
