@@ -10,8 +10,8 @@ namespace Team01_Project01.Models
 {
     public class Schedule
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ScaffoldColumn(false)]
+            [DatabaseGenerated(DatabaseGeneratedOption.None)]
+            [ScaffoldColumn(false)]
             [Key]            
             public int ScheduleId { get; set; }
            
@@ -25,9 +25,6 @@ namespace Team01_Project01.Models
 
         public int CoursesId { get; set; }
         public virtual Courses Courses { get; set; }
-            
-       // public int SectionId { get; set; }
-       // public virtual Section Sections { get; set; }
 
         public int LocationId { get; set; }
         public virtual Location Locations { get; set; }
@@ -51,7 +48,6 @@ namespace Team01_Project01.Models
             item.date = Convert.ToDateTime(values[i++]);
             item.FacultyId = Convert.ToInt32(values[i++]);
             item.CoursesId = Convert.ToInt32(values[i++]);
-            //item.SectionId = Convert.ToInt32(values[i++]);
             item.LocationId = Convert.ToInt32(values[i++]);
 
             return item;

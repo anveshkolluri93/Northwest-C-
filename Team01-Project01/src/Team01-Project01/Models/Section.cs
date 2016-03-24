@@ -27,9 +27,6 @@ namespace Team01_Project01.Models
         public int FacultyId { get; set; }
         public virtual Faculty Faculties { get; set; }
 
-        //public virtual ICollection<Schedule> Schedules { get; set; }
-       
-       
         public static List<Section> ReadAllFromCSV(string filepath)
         {
             List<Section> lst = File.ReadAllLines(filepath)
@@ -42,7 +39,6 @@ namespace Team01_Project01.Models
         {
             string[] values = csvLine.Split(',');
             Section item = new Section();
-
             int i = 0;
             item.SectionId = Convert.ToInt32(values[i++]);
             item.capacity = Convert.ToInt32(values[i++]);
