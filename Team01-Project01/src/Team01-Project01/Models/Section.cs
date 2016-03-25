@@ -17,7 +17,7 @@ namespace Team01_Project01.Models
         [Key]
         public int SectionId { get; set; }
 
-        [Range(0,100)]
+   
         [Display(Name ="Capacity")]
         public int capacity { get; set;  }
 
