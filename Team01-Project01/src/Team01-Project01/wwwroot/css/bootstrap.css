@@ -3459,6 +3459,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: block;
   padding: 10px 15px;
 }
+
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
@@ -3473,6 +3474,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
+}
+
+#navigation .navbar-nav.navbar-right li a {
+	color: #43484E;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	
+	text-transform: uppercase;
+	
+	
+	padding: 6px 15px;
 }
 .nav .open > a,
 .nav .open > a:hover,
@@ -3639,9 +3651,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 60px;
-  margin-bottom: 21px;
+  min-height: 20px;
+  margin-bottom: -5px;
   border: 1px solid transparent;
+}
+ }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4045,7 +4063,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #15a589;
+  background-color: darkorange;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
