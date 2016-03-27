@@ -3,11 +3,8 @@
 }
 
 
-
-
 <html>
 <head>
-
 
     <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("/css/Team01.css")" rel="stylesheet">
@@ -22,12 +19,21 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
     -->
+    
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    
     <!--[if lt IE 9]> <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script> <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.png">
@@ -35,7 +41,15 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-
+  
+    <script type="text/javascript" src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/smoothscroll.js"></script>
+    <script type="text/javascript" src="~/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+    =======
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
@@ -43,9 +57,9 @@
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="js/jquery.parallax.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+   
 </head>
 <body>
-
 
     <div class="preloader">
         <div class="preloder-wrap">
@@ -75,12 +89,10 @@
                         <li class="scroll active"><a asp-controller="Home" asp-action="About">About Us</a></li>
                         <li class="scroll"><a asp-controller="Home" asp-action="Index">Services</a></li>
                         <li class="scroll"><a asp-controller="Home" asp-action="Index">Our Team</a></li>
-
                         <li class="scroll"><a asp-controller="Home" asp-action="Index">Blog</a></li>
                         <li class="scroll"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                         <!--  <li><a href="#my-div"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
                         <li><a asp-controller="Home" asp-action="Signup"><span class="glyphicon glyphicon-log-in"></span> Signup</a></li>
-
                         <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
@@ -101,7 +113,6 @@
                 </p>
             </div>
         </div>
-
         <div id="team-carousel" class="carousel slide" data-interval="false">
             <a class="member-left" href="#team-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
             <a class="member-right" href="#team-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -113,7 +124,6 @@
                             <br />
                             <h4>Manindra Naresh Kumar</h4>
                             <h5>Controller &amp; routing lead</h5>
-
                             <div class="socials">
                                 <a href="https://www.facebook.com/manindra.naresh"><i> <img src="~/images/opened4.png" border="0"></i></a>
                                 <a href="mailto:s525248@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
@@ -124,10 +134,8 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="single-member">
                             <img src="~/images/anvesh.jpg" alt="team member" />
-
                             <h4> Anveshkumar Kolluri</h4>
                             <h5>Issues Lead &amp; Repo Admin</h5>
-
                             <div class="socials">
                                 <a href="https://www.facebook.com/anveshkolluri93"><i> <img src="~/images/opened4.png" border="0"></i></a>
                                 <a href="mailto:s525272@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
@@ -138,10 +146,8 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="single-member">
                             <img src="~/images/raihan.jpg" alt="team member" />
-
                             <h4> Raihan Ahmed</h4>
                             <h5>Project Planning, Reporting &amp; Presentation Lead</h5>
-
                             <div class="socials">
                                 <a href="https://www.facebook.com/raihan.ahmed.9083"><i> <img src="~/images/opened4.png" border="0"></i></a>
                                 <a href="mailto:s525248@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
@@ -178,7 +184,6 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="single-member">
                             <img src="~/images/sai.jpg" alt="team member" />
-
                             <h4>Sigh Krihsh-nah(iswar)</h4>
                             <h5>Presentation Lead &amp; Documentation Lead </h5>
                             <div class="socials">
@@ -188,7 +193,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
