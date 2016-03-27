@@ -19,13 +19,15 @@ namespace Team01_Project01.Models
             [DataType(DataType.Date)]
             public DateTime date { get; set; }
 
-
+        [ScaffoldColumn(true)]
         public int FacultyId { get; set; }
         public virtual Faculty Faculties { get; set; }
 
+        [ScaffoldColumn(true)]
         public int CoursesId { get; set; }
         public virtual Courses Courses { get; set; }
 
+        [ScaffoldColumn(true)]
         public int LocationId { get; set; }
         public virtual Location Locations { get; set; }
 
