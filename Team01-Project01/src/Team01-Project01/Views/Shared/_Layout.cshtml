@@ -72,6 +72,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
+                        <li><a asp-controller="Logo" asp-action="Home"><span class="glyphicon glyphicon-log-in"><img src="images/logo.png" alt="logo"></span> </a></li>
                         <li class="scroll active"><a href="#navigation">Home</a></li>
                         <li class="scroll"><a href="#about-us">About Us</a></li>
                         <li class="scroll"><a href="#services">Services</a></li>
@@ -161,14 +162,14 @@
                         <div class="tab-content">
                             <div class="tab-pane fade in active" id="about">
                                 <div class="media">
-                                    <img class="pull-left media-object" src="images/about-us/about.jpg" alt="about us">
+                                    <img class="pull-left media-object" src="images/about-us/writers-writing.jpg" alt="about us">
                                     <div class="media-body">
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="mission">
                                 <div class="media">
-                                    <img class="pull-left media-object" src="images/about-us/mission.jpg" alt="Mission">
+                                    <img class="pull-left media-object" src="images/about-us/Intenttoregister-675x274.jpg" alt="Mission">
                                     <div class="media-body">
                                         <p>  Registering for the classes is an important aspect which every student is supposed to do, before the classes are commenced. We try to make it convenient for the students to make their choices and aid them in enrolling for the classes considering all the time constraints.</p>
 
@@ -243,7 +244,7 @@
                             <div class="col-sm-4">
                                 <div class="single-service">
                                     <i class="fa fa-users"></i>
-                                    <h2>Online Marketing</h2>
+                                    <h2>Facile Registration</h2>
                                 </div>
                             </div>
                         </div>
@@ -601,7 +602,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="single-blog">
-                        <img src="~/images/spring.jpg" alt="" />
+                        <img src="~/images/Sring-Classes.png" alt="" />
                         <h2>Spring Courses Registration</h2>
                        
                         <div class="blog-content">
@@ -613,7 +614,7 @@
                             <div class="modal-content">
                                 <div class="modal-body">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="~/images/spring.jpg" alt="" />
+                                    <img src="~/images/Sring-Classes.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -621,7 +622,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="single-blog">
-                        <img src="~/images/summer.jpg" alt="" />
+                        <img src="~/images/Summer Courses.jpg" alt="" />
                         <h2>Summer Courses Registration</h2>
                         
                         <div class="blog-content">
@@ -633,7 +634,7 @@
                             <div class="modal-content">
                                 <div class="modal-body">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="~/images/summer.jpg" alt="" />
+                                    <img src="~/images/Summer Courses.jpg" alt="" />
                                    </div>
                             </div>
                         </div>
@@ -641,7 +642,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="single-blog">
-                        <img src="~/images/Fall.jpg" alt="" />
+                        <img src="~/images/fallClassesSlider.jpg" alt="" />
                         <h2>Fall Courses Registration</h2>
                        
                         <div class="blog-content">
@@ -653,7 +654,7 @@
                             <div class="modal-content">
                                 <div class="modal-body">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="~/images/Fall.jpg" alt="" />
+                                    <img src="~/images/fallClassesSlider.jpg" alt="" />
                                   </div>
                             </div>
                         </div>
@@ -679,7 +680,8 @@
                 <div class="row text-center clearfix">
                     <div class="col-sm-6">
                         <div class="contact-address">
-                            <address><p><span>Devs</span>Cluster</p><strong>36 North Kafrul<br>Dhaka Cantonment Area<br> Dhaka-1206, Bangladesh</strong><br><small></small></address>
+                            <img src="~/images/logo.png" alt="" />
+                            <p><span>Scheduler</span></p>
                             <div class="social-icons">
                                 <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
@@ -690,7 +692,7 @@
                     <div class="col-sm-6">
                         <div id="contact-form-section">
                             <div class="status alert alert-success" style="display: none"></div>
-                            <form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+                            <form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.js">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control name-field" required="required" placeholder="Your Name">
                                 </div>
@@ -711,13 +713,7 @@
         </div>
     </section> <!--/#contact-->
 
-    <footer id="footer">
-        <div class="container">
-            <div class="text-center">
-                <p>Copyright &copy; 2014 - <a href="http://mostafiz.me/">Mostafiz</a> | All Rights Reserved</p>
-            </div>
-        </div>
-    </footer> <!--/#footer-->
+
 
 
                         @*<li><a asp-controller="Home" asp-action="About"><b>About</b></a></li>
