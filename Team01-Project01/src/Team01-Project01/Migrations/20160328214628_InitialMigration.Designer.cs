@@ -8,7 +8,7 @@ using Team01_Project01.Models;
 namespace Team01Project01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20160327003708_InitialMigration")]
+    [Migration("20160328214628_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
