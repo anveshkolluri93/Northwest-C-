@@ -17,6 +17,10 @@ namespace Team01_Project01.Controllers
         {
             return View();
         }
+        public IActionResult schedulee()
+        {
+            return View();
+        }
 
         public IActionResult LoginAbout()
         {

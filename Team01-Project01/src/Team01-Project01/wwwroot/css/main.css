@@ -627,7 +627,12 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #fff;
   margin-bottom:35px
 }
-
+#pan4{
+    background-color:aliceblue;
+}
+#colo{
+    background-color:aliceblue;
+}
 .single-service {
 	background-color: rgba(0, 0, 0, 0.39);
 	padding:25px;
@@ -742,7 +747,7 @@ h1, h2, h3, h4, h5, h6 {
 	border:0
 }
 
-#our-team .socials a .fa-facebook:hover {
+#our-team .socials a . -facebook:hover {
 	background: #3B5997;	
 }
 
