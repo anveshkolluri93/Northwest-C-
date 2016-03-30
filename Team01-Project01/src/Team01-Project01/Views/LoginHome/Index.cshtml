@@ -42,10 +42,6 @@
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="js/jquery.parallax.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-     <script> function Contactvalidate() {
-     alert("Your message submitted. We will get back to you soon");
- }
-    </script>
 
 </head>
 <body>
@@ -105,7 +101,7 @@
                 <li data-target="#main-carousel" data-slide-to="2"></li>
             </ol><!--/.carousel-indicators-->
             <div class="carousel-inner">
-                <div class="item active" style="background-image: url(images/s3.jpg)">
+                <div class="item active" style="background-image: url(images/register.jpg)">
                     <div class="carousel-caption">
                         <div>
                             <h2 class="heading animated bounceInDown"></h2>
@@ -116,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/slider/s2.jpg)">
+                <div class="item" style="background-image: url(images/slider/slide2.jpg)">
                     <div class="carousel-caption">
                         <div>
                             <h2 class="heading animated bounceInDown">Get All Courses</h2>
@@ -125,7 +121,7 @@
    </div>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/slider/s1.jpg)">
+                <div class="item" style="background-image: url(images/slider/slide1.jpg)">
                     <div class="carousel-caption">
                         <div>
                             <h2 class="heading animated bounceInRight"></h2>
@@ -694,20 +690,19 @@
                     <div class="col-sm-6">
                         <div id="contact-form-section">
                             <div class="status alert alert-success" style="display: none"></div>
-                            <form id="contact-form" class="contact" name="contact-form" method="get" >
+                            <form id="contact-form" class="contact" name="contact-form" method="post" action="">
                                 <div class="form-group">
-                                    <input type="text" id ="name" name="name" class="form-control name-field"  placeholder="Your Name">
+                                    <input type="text" name="name" class="form-control name-field" required="required" placeholder="Your Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" id ="email" name="email" class="form-control mail-field"  placeholder="Your Email">
+                                    <input type="email" name="email" class="form-control mail-field" required="required" placeholder="Your Email">
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" id="message"  class="form-control" rows="8" placeholder="Message"></textarea>
+                                    <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary" onclick="Contactvalidate()">Send</button>
+                                    <button type="submit" class="btn btn-primary">Send</button>
                                 </div>
-                                
                             </form>
                         </div>
                     </div>

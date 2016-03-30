@@ -13,6 +13,18 @@ namespace Team01_Project01.Controllers
             return View();
         }
 
+        public IActionResult LoginIndex()
+        {
+            return View();
+        }
+
+        public IActionResult LoginAbout()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -39,5 +51,7 @@ namespace Team01_Project01.Controllers
         {
             return View();
         }
+
+
     }
 }

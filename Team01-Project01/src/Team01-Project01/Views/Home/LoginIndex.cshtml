@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewData["Title"] - Team01 Project</title>
 
-
     <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("/css/Team01.css")" rel="stylesheet">
     <!--  <environment names="Development">
@@ -21,12 +20,12 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
     -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]> <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script> <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.png">
@@ -35,14 +34,16 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/smoothscroll.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    <script type="text/javascript" src="js/jquery.parallax.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-     <script> function Contactvalidate() {
+    <script type="text/javascript" src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/smoothscroll.js"></script>
+
+    <script type="text/javascript" src="~/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+    <script>
+ function Contactvalidate() {
      alert("Your message submitted. We will get back to you soon");
  }
     </script>
@@ -50,7 +51,7 @@
 </head>
 <body>
 
-
+    
 
     <div class="preloader">
         <div class="preloder-wrap">
@@ -83,9 +84,9 @@
                         <li class="scroll"><a href="#blog">Blog</a></li>
                         <li class="scroll"><a href="#contact">Contact</a></li>
                         <!--  <li><a href="#my-div"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-                        <li><a asp-controller="Home" asp-action="Signup"><span class="glyphicon glyphicon-log-in"></span> Signup</a></li>
+                        
 
-                        <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -105,33 +106,32 @@
                 <li data-target="#main-carousel" data-slide-to="2"></li>
             </ol><!--/.carousel-indicators-->
             <div class="carousel-inner">
-                <div class="item active" style="background-image: url(images/s3.jpg)">
+                <div class="item active" id="bg1">
                     <div class="carousel-caption">
                         <div>
                             <h2 class="heading animated bounceInDown"></h2>
                             <p class="animated bounceInUp"></p>
-                           
+
                             <a class="btn btn-default slider-btn animated fadeIn" asp-controller="Home" asp-action="Login">Get Courses</a>
 
                         </div>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/slider/s2.jpg)">
+                <div class="item" id="bg2">
                     <div class="carousel-caption">
                         <div>
-                            <h2 class="heading animated bounceInDown">Get All Courses</h2>
-                            <p class="animated bounceInUp"> </p> 
+                            <p class="animated bounceInUp"> </p>
                             <a class="btn btn-default slider-btn animated fadeIn" asp-controller="Home" asp-action="Login">Get Courses</a>
-   </div>
+                        </div>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/slider/s1.jpg)">
+                <div class="item" id="bg3">
                     <div class="carousel-caption">
                         <div>
                             <h2 class="heading animated bounceInRight"></h2>
                             <p class="animated bounceInLeft"></p>
                             <a class="btn btn-default slider-btn animated fadeIn" asp-controller="Home" asp-action="Login">Get Courses</a>
-  </div>
+                        </div>
                     </div>
                 </div>
             </div><!--/.carousel-inner-->
@@ -167,14 +167,15 @@
                         <div class="tab-content">
                             <div class="tab-pane fade in active" id="about">
                                 <div class="media">
-                                    <img class="pull-left media-object" src="images/about-us/about.jpg" alt="about us">
-                                    <div class="media-body">
+                                    <img class="pull-left media-object" src="~/images/about-us/about.jpg" alt="about us">
+                                    
+                                        <div class="media-body">
+                                        </div>
                                     </div>
-                                </div>
                             </div>
                             <div class="tab-pane fade" id="mission">
                                 <div class="media">
-                                    <img class="pull-left media-object" src="images/about-us/keepcalmthiswillbefine.png" alt="Mission">
+                                    <img class="pull-left media-object" src="~/images/about-us/keepcalmthiswillbefine.png" alt="Mission">
                                     <div class="media-body">
                                         <p>  Registering for the classes is an important aspect which every student is supposed to do, before the classes are commenced. We try to make it convenient for the students to make their choices and aid them in enrolling for the classes considering all the time constraints.</p>
 
@@ -613,7 +614,7 @@
                         <div class="blog-content">
                         </div>
                         <a class="btn btn-primary" data-toggle="modal" data-target="#blog-two" asp-controller="Home" asp-action="Login">Click here</a>
- </div>
+                    </div>
                     <div class="modal fade" id="blog-detail" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -633,14 +634,14 @@
                         <div class="blog-content">
                         </div>
                         <a class="btn btn-primary" data-toggle="modal" data-target="#blog-two" asp-controller="Home" asp-action="Login">Click here</a>
-  </div>
+                    </div>
                     <div class="modal fade" id="blog-two" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     <img src="~/images/summer.jpg" alt="" />
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -654,7 +655,7 @@
                         <div class="blog-content">
                         </div>
                         <a class="btn btn-primary" data-toggle="modal" data-target="#blog-two" asp-controller="Home" asp-action="Login">Click here</a>
-                </div>
+                    </div>
                     <div class="modal fade" id="blog-three" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -675,7 +676,7 @@
             <div class="row text-center clearfix">
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="contact-heading">
-                        <h2 class="title-one">Contact With Us</h2><br /><h3>We'd Love to Hear From You!!</h3><small>Please respond below</small> 
+                        <h2 class="title-one">Contact With Us</h2><br /><h3>We'd Love to Hear From You!!</h3><small>Please respond below</small>
                     </div>
                 </div>
             </div>
@@ -685,29 +686,29 @@
                 <div class="pattern"></div>
                 <div class="row text-center clearfix">
                     <div class="col-sm-6">
-                        
-                            <div class="contact-address">
-    <address><strong>Northwest Missouri State University<br>800 University Dr, Maryville, MO 64468</strong></address>
-</div>
-                            
+
+                        <div class="contact-address">
+                            <address><strong>Northwest Missouri State University<br>800 University Dr, Maryville, MO 64468</strong></address>
                         </div>
+
+                    </div>
                     <div class="col-sm-6">
                         <div id="contact-form-section">
                             <div class="status alert alert-success" style="display: none"></div>
-                            <form id="contact-form" class="contact" name="contact-form" method="get" >
+                            <form id="contact-form" class="contact" name="contact-form" method="get">
                                 <div class="form-group">
-                                    <input type="text" id ="name" name="name" class="form-control name-field"  placeholder="Your Name">
+                                    <input type="text" id="name" name="name" class="form-control name-field" placeholder="Your Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" id ="email" name="email" class="form-control mail-field"  placeholder="Your Email">
+                                    <input type="email" id="email" name="email" class="form-control mail-field" placeholder="Your Email">
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" id="message"  class="form-control" rows="8" placeholder="Message"></textarea>
+                                    <textarea name="message" id="message" class="form-control" rows="8" placeholder="Message"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary" onclick="Contactvalidate()">Send</button>
                                 </div>
-                                
+
                             </form>
                         </div>
                     </div>
@@ -715,8 +716,6 @@
             </div>
         </div>
     </section> <!--/#contact-->
-
-
     @*<li><a asp-controller="Home" asp-action="About"><b>About</b></a></li>
 
             <li>
@@ -739,8 +738,6 @@
             </div>
         </div>
     </footer> <!--/#footer-->
-
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <!-- /.navbar-collapse -->
     <!-- /.container -->

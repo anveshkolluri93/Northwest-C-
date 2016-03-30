@@ -1,0 +1,201 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<html>
+<head>
+
+    <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/Team01.css")" rel="stylesheet">
+    <!--  <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    -->
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]> <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script> <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript" src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/smoothscroll.js"></script>
+    <script type="text/javascript" src="~/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+    =======
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="preloder-wrap">
+            <div class="preloder-inner">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
+        </div>
+    </div><!--/.preloader-->
+    <header id="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    @*<a class="navbar-brand" href="index.html"><h1><img src="images/logo.png" alt="logo"></h1></a>*@
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="scroll"><a asp-controller="Home" asp-action="Index" s>Home</a></li>
+                        <li class="scroll active"><a asp-controller="Home" asp-action="About">About Us</a></li>
+                        <li class="scroll"><a asp-controller="Home" asp-action="Index">Services</a></li>
+                        <li class="scroll"><a asp-controller="Home" asp-action="Index">Our Team</a></li>
+                        <li class="scroll"><a asp-controller="Home" asp-action="Index">Blog</a></li>
+                        <li class="scroll"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        <!--  <li><a href="#my-div"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+                        <li><a asp-controller="Home" asp-action="Signup"><span class="glyphicon glyphicon-log-in"></span> Signup</a></li>
+                        <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--/navbar-->
+    </header> <!--/#navigation-->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="title-one">
+                    Meet The Team
+                </h2>
+                <p>
+                    Traditionally, to register the courses students create three or more plans for it. Sometimes there might be only 2 or 3 possible plans available to choose from.
+                    Our application aims to aid the students and make it simpler to choose from all the available timings, by creating possible plans.
+                    The student just needs to enter the days and timings of your classes and the name of the professors they are interested in and their priorities.
+                    The plan with no clashes will be made available to the student. We also try to depict the available schedules in various forms to make it easy for the students to understand and use the resources according to their convenience.
+                </p>
+            </div>
+        </div>
+        <div id="team-carousel" class="carousel slide" data-interval="false">
+            <a class="member-left" href="#team-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="member-right" href="#team-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <div class="carousel-inner team-members">
+                <div class="row item active">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="single-member">
+                            <img src="~/images/naresh.jpg" alt="team member" />
+                            <br />
+                            <h4>Manindra Naresh Kumar</h4>
+                            <h5>Controller &amp; routing lead</h5>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/manindra.naresh"><i> <img src="~/images/opened4.png" border="0"></i></a>
+                                <a href="mailto:s525248@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
+                                <a href="https://www.linkedin.com/in/manindra-naresh-9683086b"><i><img src="http://s29.postimg.org/95jtsffj7/Linked_In_48.png" border="0"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="single-member">
+                            <img src="~/images/anvesh.jpg" alt="team member" />
+                            <h4> Anveshkumar Kolluri</h4>
+                            <h5>Issues Lead &amp; Repo Admin</h5>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/anveshkolluri93"><i> <img src="~/images/opened4.png" border="0"></i></a>
+                                <a href="mailto:s525272@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
+                                <a href="https://www.linkedin.com/in/anvesh-kolluri-7b0a347a?trk=hp-identity-name"><i><img src="http://s29.postimg.org/95jtsffj7/Linked_In_48.png" border="0"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="single-member">
+                            <img src="~/images/raihan.jpg" alt="team member" />
+                            <h4> Raihan Ahmed</h4>
+                            <h5>Project Planning, Reporting &amp; Presentation Lead</h5>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/raihan.ahmed.9083"><i> <img src="~/images/opened4.png" border="0"></i></a>
+                                <a href="mailto:s525248@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
+                                <a href="https://www.linkedin.com/in/mraihanahmed"><i><img src="http://s29.postimg.org/95jtsffj7/Linked_In_48.png" border="0"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="single-member">
+                            <img src="~/images/chandu.jpg" alt="team member" />
+                            <h4>Chandrakanth Podishetty</h4>
+                            <h5>Views, views model & Testing Lead</h5>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/chandu.podisetty"><i> <img src="~/images/opened4.png" border="0"></i></a>
+                                <a href="mailto:s522612@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
+                                <a href="https://www.linkedin.com/in/chandrakanth-podishetty/"><i><img src="http://s29.postimg.org/95jtsffj7/Linked_In_48.png" border="0"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="single-member">
+                            <img src="~/images/jagad.jpg" alt="team member" />
+                            <h4>Jagadeesh Babu Basimsetty</h4>
+                            <h5>Models,Persistence Lead & Testing Lead</h5>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/jb.jagadeesh"><i> <img src="~/images/opened4.png" border="0"></i></a>
+                                <a href="mailto:s522563@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
+                                <a href="https://www.linkedin.com/in/JagadeeshBasimsetty"><i><img src="http://s29.postimg.org/95jtsffj7/Linked_In_48.png" border="0"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="single-member">
+                            <img src="~/images/sai.jpg" alt="team member" />
+                            <h4>Sigh Krihsh-nah(iswar)</h4>
+                            <h5>Presentation Lead &amp; Documentation Lead </h5>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/Saikrishna.ch"><i> <img src="~/images/opened4.png" border="0"></i></a>
+                                <a href="mailto:s522570@mail.nwmissouri.edu"><i><img src="http://s29.postimg.org/3vev14vab/Facebook_48.png" border="0"></i></a>
+                                <a href="https://www.linkedin.com"><i><img src="http://s29.postimg.org/95jtsffj7/Linked_In_48.png" border="0"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

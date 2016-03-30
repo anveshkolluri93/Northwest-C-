@@ -611,6 +611,17 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top:50px
 }
 
+#bg1 {
+    background-image: url('../images/slider/s1.jpg');
+  
+}
+
+#bg2 {
+    background-image: url('../images/slider/s2.jpg');
+}
+#bg3 {
+    background-image: url('../images/s3.jpg');
+}
 #services h2{
   color: #fff;
   border-color: #fff;
