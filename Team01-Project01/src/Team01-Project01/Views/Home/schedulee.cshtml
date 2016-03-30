@@ -3,16 +3,77 @@
 *@
 @{
 }
+<html>
+<head>
+
+
+    <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/Team01.css")" rel="stylesheet">
+    <!--  <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]> <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script> <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript" src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/smoothscroll.js"></script>
+
+    <script type="text/javascript" src="~/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+</head>
 <body class="abc" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQSEhUUEhQWFBQUFxcXFxcXFxcXHBUYFBcXHBQcGBwYHCggHBolHBcXIjEiJSkrLi4uHB8zODMsNygtLisBCgoKDAwNDgwPGisZExkrKysrKysrKysrKysrNywrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAJcBTQMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAIBABAQEBAQABBAMAAAAAAAAAAAER8GFRAkGBsXGRwf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7DRFoh39ILQDAA0RYAi4AYGICpVO70EUICKAIouAhgYBRMUBBQAAIAAUhQDAwARb3fAJ39AtAAAqCgind6AimGgYABEUBF7vSGAQwARQkBMUJQIEKAkUARaAWIKB+0UALDQChTQRe7woAQwoIoAlXA3vgAgAQIT8AgpgBCIC2FRQTFRbQBFBKKAaBgAUATBQAQFEighqgBTAFRFBMXEWAUSgKlUARTACB9wKVF7vATFQ+qgRYaABoAEAIaUA7vUXCd3yAmC2gFDQA0AiL3eABKigkFO7wEXu9IABpoCKAUEBdABFKaCRYaABpoFCAEBAWItASKEoFglUAlMADTADu9CEgFRYAGABAiYCmnd4mAoAItMO7wEFADO77GoClRcANCAd3gi2AQLAEihALBKoBP5hhoBhQEXABJVACAkBQSAsDADANAiKYAABond6sAAAAAxFiTu+AWgAi6JQWlJ3fBQAADABFRQRQAh+BIAtSRQDBAXu9IUzu+4AkUANAA7vUBRFkAwiLACkQFLAlAAAIlANUKAAAFgAJq6AAAJIAd3i4J3eAoUwClSAKWpKugmLoQAKUARZAIimgEEBYi6AQgAAgKEAKYAFoi6CVYQApQAogChf0Ailvd90oKU00EW0ACQpQFn5ZWACRZQIBgEoABUi4CKUBFTQFO/kKBTSgHd4CUF7vUXCAQT6TQUsSqAGgJq6SABAAqRUsBUW93wgKI1KCGBgEoUAT6vSLYASgBgACKAagAKABigIKAiKAaACAApAAwoAaYAGgAAAgoCf41gAhAAAAAA1AB//2Q==')">
     <br /><br />
+
+
+    <header id="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    @*<a class="navbar-brand" href="index.html"><h1><img src="images/logo.png" alt="logo"></h1></a>*@
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a asp-controller="Home" asp-action="Login"><span class="glyphicon glyphicon-log-out"></span> Logut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--/navbar-->
+    </header> <!--/#navigation-->
     <h2> Schedule for your Couse</h2>
     <div>
         <div class="tabbable col-xs-6">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-pills nav-justified">
 
-                <li><a href="#pane2" data-toggle="tab">Schedule 1</a></li>
-                <li><a href="#pane3" data-toggle="tab">Schedule 2</a></li>
-                <li><a href="#pane4" data-toggle="tab">Schedule 3</a></li>
+                <li><a href="#pane2" data-toggle="tab">Create Schdeule</a></li>
+                <li><a href="#pane3" data-toggle="tab">Browse Professors</a></li>
+                <li><a href="#pane4" data-toggle="tab">Liked Schedules</a></li>
+                <li><a href="#pane4" data-toggle="tab">Student Profile</a></li>
             </ul>
 
             <div class="tab-content">
@@ -159,3 +220,4 @@
         </div><!-- /.tabbable -->
     </div>
 </body>
+</html>
